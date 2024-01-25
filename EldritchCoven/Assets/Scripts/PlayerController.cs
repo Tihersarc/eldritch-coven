@@ -5,6 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public delegate void ShowHiddenObjects();
+    public static event ShowHiddenObjects showHiddenObjects;
+
+    public delegate void HideObjects();
+    public static event HideObjects hideObjects;
+
     Vector2 moveInput;
     MovementBehaviour mvb;
     [SerializeField]
@@ -32,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     void OnTakePhoto(InputValue input)
     {
+        showHiddenObjects?.Invoke();
         plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);
+        hideObjects?.Invoke();
     }
 }
