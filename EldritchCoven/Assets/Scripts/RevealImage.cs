@@ -16,6 +16,7 @@ public class RevealImage : MonoBehaviour
     {
         if (ctx.performed)
         {
+            anim.ResetTrigger("NewImage");
             anim.Play("ImageFade");
             anim.speed = 1;
         }
@@ -28,7 +29,10 @@ public class RevealImage : MonoBehaviour
 
     public void OnTakePhoto(InputAction.CallbackContext ctx)
     {
-        anim.speed = 1;
-        anim.SetTrigger("NewImage");
+        if (ctx.performed)
+        {
+            anim.speed = 1;
+            anim.SetTrigger("NewImage");
+        }
     }
 }
