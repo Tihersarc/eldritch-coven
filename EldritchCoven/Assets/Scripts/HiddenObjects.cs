@@ -20,6 +20,7 @@ public class HiddenObjects : MonoBehaviour
 
     private void ShowHiddenObject()
     {
+        Debug.Log("UwU");
         gameObject.layer = layerToShow;
     }
 

@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     void OnTakePhoto(InputValue input)
     {
         showHiddenObjects?.Invoke();
+        camera.Render();
         plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);
         hideObjects?.Invoke();
     }
