@@ -13,10 +13,8 @@ public class PlayerController : MonoBehaviour
 
     Vector2 moveInput;
     MovementBehaviour mvb;
-    [SerializeField]
-    GameObject plane;
-    [SerializeField]
-    Camera camera;
+    [SerializeField] GameObject plane;
+    [SerializeField] private Camera camera;
 
     private void Start()
     {
@@ -25,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(moveInput);
         if (moveInput != Vector2.zero)
         {
             mvb.MoveRB(moveInput);
