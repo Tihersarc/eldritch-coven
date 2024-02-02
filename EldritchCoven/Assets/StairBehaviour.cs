@@ -20,39 +20,83 @@ public class StairBehaviuor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ( rigidBody.velocity != Vector3.zero)
-            stepClimb();
+        //if (rigidBody.velocity != Vector3.zero)
+        //    StepClimb();
     }
 
-    void stepClimb()
+    public void StepClimb()
     {
         RaycastHit hitLower;
-        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, stepRange))
+        if (Physics.Raycast(stepRayLower.transform.position, transform.forward, out hitLower, stepRange))
         {
             RaycastHit hitUpper;
-            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward), out hitUpper, stepRange + 0.1f))
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.forward, out hitUpper, stepRange + 0.1f))
             {
                 rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
             }
         }
 
         RaycastHit hitLower45;
-        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitLower45, stepRange))
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, -45, 0) * transform.forward, out hitLower45, stepRange))
         {
 
             RaycastHit hitUpper45;
-            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitUpper45, stepRange + 0.1f))
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, -45, 0) * transform.forward, out hitUpper45, stepRange + 0.1f))
             {
                 rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
             }
         }
 
         RaycastHit hitLowerMinus45;
-        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitLowerMinus45, stepRange))
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, 45, 0) * transform.forward, out hitLowerMinus45, stepRange))
         {
 
             RaycastHit hitUpperMinus45;
-            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitUpperMinus45, stepRange + 0.1f))
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, 45, 0) * transform.forward, out hitUpperMinus45, stepRange + 0.1f))
+            {
+                rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+
+        RaycastHit hitLower90;
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, 90, 0) * transform.forward, out hitLower90, stepRange))
+        {
+
+            RaycastHit hitUpper90;
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, 90, 0) * transform.forward, out hitUpper90, stepRange + 0.1f))
+            {
+                rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+
+        RaycastHit hitLowerMinus90;
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, -90, 0) * transform.forward, out hitLowerMinus90, stepRange))
+        {
+
+            RaycastHit hitUpperMinus90;
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, -90, 0) * transform.forward, out hitUpperMinus90, stepRange + 0.1f))
+            {
+                rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+
+        RaycastHit hitLower135;
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, 135, 0) * transform.forward, out hitLower135, stepRange))
+        {
+
+            RaycastHit hitUpper135;
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, 135, 0) * transform.forward, out hitUpper135, stepRange + 0.1f))
+            {
+                rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+
+        RaycastHit hitLowerMinus135;
+        if (Physics.Raycast(stepRayLower.transform.position, Quaternion.Euler(0, -135, 0) * transform.forward, out hitLowerMinus135, stepRange))
+        {
+
+            RaycastHit hitUpperMinus135;
+            if (!Physics.Raycast(stepRayUpper.transform.position, Quaternion.Euler(0, -135, 0) * transform.forward, out hitUpperMinus135, stepRange + 0.1f))
             {
                 rigidBody.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
             }

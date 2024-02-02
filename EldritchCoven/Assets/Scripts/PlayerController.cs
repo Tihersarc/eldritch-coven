@@ -11,14 +11,16 @@ public class PlayerController : MonoBehaviour
     public delegate void HideObjects();
     public static event HideObjects hideObjects;
 
-    Vector2 moveInput;
-    MovementBehaviour mvb;
-    [SerializeField] GameObject plane;
+    private StairBehaviuor sb;
+    private Vector2 moveInput;
+    private MovementBehaviour mvb;
+    [SerializeField] private GameObject plane;
     [SerializeField] private Camera camera;
 
     private void Start()
     {
         mvb = GetComponent<MovementBehaviour>();
+        sb = GetComponent<StairBehaviuor>();
     }
 
     private void FixedUpdate()
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (moveInput != Vector2.zero)
         {
             mvb.MoveRB(moveInput);
+            sb.StepClimb();
         }
     }
 
