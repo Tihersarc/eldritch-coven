@@ -15,7 +15,7 @@ public class StairBehaviuor : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    // Check all the directions in steps of 45 degrees to check if the player need to go up stairs
+    // Check all the directions in steps of 45 degrees using raycasts to check if the player need to go up stairs
     public void StepClimb()
     {
         RaycastHit hitLower;
