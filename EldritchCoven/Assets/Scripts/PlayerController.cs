@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
             mvb.MoveRB(moveInput);
             sb.StepClimb();
         }
+        else
+        {
+            mvb.StopRB();
+        }
     }
 
     void OnMove(InputValue input)

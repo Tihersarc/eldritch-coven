@@ -10,8 +10,6 @@ public class MovementBehaviour : MonoBehaviour
 
     [SerializeField] private Transform stairHighRay;
     [SerializeField] private Transform stairLowRay;
-    [SerializeField] private float stairRange = .5f;
-    [SerializeField] private float stairSmooth = .01f;
 
     private void Start()
     {
@@ -25,26 +23,15 @@ public class MovementBehaviour : MonoBehaviour
 
     public void MoveRB(Vector3 direction)
     {
-        Vector3 playerVelocity = new Vector3(direction.x, 0, direction.y
-            ) * speed;
+        Vector3 playerVelocity = new Vector3(direction.x * speed, rb.velocity.y, direction.y * speed);
+
+        //rb.velocity = playerVelocity;
+
         rb.velocity = transform.TransformDirection(playerVelocity);
-        //GetComponent<CharacterController>().SimpleMove(playerVelocity);
     }
 
-    private void StairClimb()
+    public void StopRB()
     {
-        RaycastHit hitLow;
-        Debug.DrawLine(stairLowRay.transform.position, stairLowRay.transform.position + transform.forward * stairRange);
-        //Debug.DrawRay(stairHighRay.transform.position, transform.forward);
-
-        if (Physics.Raycast(stairLowRay.transform.position, transform.forward, out hitLow, stairRange))
-        {
-            RaycastHit hitHigh;
-            
-            if (!Physics.Raycast(stairHighRay.transform.position, transform.forward, out hitHigh, .2f))
-            {
-                rb.position -= new Vector3(0f, -stairSmooth, 0f);
-            }
-        }
+        rb.velocity = new Vector3(0f, rb.velocity.y, 0f); 
     }
 }
