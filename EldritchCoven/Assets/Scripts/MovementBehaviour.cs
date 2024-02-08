@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class MovementBehaviour : MonoBehaviour
 
     [SerializeField] private Transform stairHighRay;
     [SerializeField] private Transform stairLowRay;
+    [SerializeField] StudioEventEmitter stepsEmitter;
+    [SerializeField] float stepsEmissionRatio;
+    float timeMoving;
 
     private void Start()
     {
@@ -18,6 +22,12 @@ public class MovementBehaviour : MonoBehaviour
 
     private void Update()
     {
+
+        if (timeMoving >= stepsEmissionRatio)
+        {
+            timeMoving = 0;
+            stepsEmitter.Play();
+        }
         //StairClimb();
     }
 
@@ -28,10 +38,12 @@ public class MovementBehaviour : MonoBehaviour
         //rb.velocity = playerVelocity;
 
         rb.velocity = transform.TransformDirection(playerVelocity);
+        timeMoving += Time.deltaTime;
     }
 
     public void StopRB()
     {
-        rb.velocity = new Vector3(0f, rb.velocity.y, 0f); 
+        timeMoving = 0;
+        rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
     }
 }
