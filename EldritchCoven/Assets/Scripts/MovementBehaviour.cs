@@ -28,14 +28,11 @@ public class MovementBehaviour : MonoBehaviour
             timeMoving = 0;
             stepsEmitter.Play();
         }
-        //StairClimb();
     }
 
     public void MoveRB(Vector3 direction)
     {
         Vector3 playerVelocity = new Vector3(direction.x * speed, rb.velocity.y, direction.y * speed);
-
-        //rb.velocity = playerVelocity;
 
         rb.velocity = transform.TransformDirection(playerVelocity);
         timeMoving += Time.deltaTime;
