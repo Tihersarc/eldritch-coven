@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private MovementBehaviour mvb;
     [SerializeField] private GameObject plane;
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera cameraPhotos;
 
     private void Start()
     {
@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(moveInput);
         if (moveInput != Vector2.zero)
         {
             mvb.MoveRB(moveInput);
@@ -45,7 +44,7 @@ public class PlayerController : MonoBehaviour
     void OnTakePhoto(InputValue input)
     {
         showHiddenObjects?.Invoke();
-        plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);
+        plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
         hideObjects?.Invoke();
     }
 }
