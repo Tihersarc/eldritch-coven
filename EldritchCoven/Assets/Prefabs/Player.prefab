@@ -253,8 +253,8 @@ Transform:
   m_GameObject: {fileID: 801220012864198051}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.018, y: 0, z: -0.63}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.018, y: 0, z: -0.304}
+  m_LocalScale: {x: 0.242, y: 0.242, z: 0.242}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8999745275139448711}
@@ -623,7 +623,6 @@ GameObject:
   - component: {fileID: 1998923048601288617}
   - component: {fileID: 8267038060365584281}
   - component: {fileID: 3261938521524615877}
-  - component: {fileID: 2807133640599146580}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -640,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 2425489838773444172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.179, z: -7.418}
+  m_LocalPosition: {x: 0, y: 1.779, z: -1.486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -743,19 +742,6 @@ MonoBehaviour:
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
 --- !u!114 &3261938521524615877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425489838773444172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
---- !u!114 &2807133640599146580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2941,6 +2927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6352377551511084264}
+  - component: {fileID: 4961566643417286634}
   m_Layer: 0
   m_Name: PlayerAudio
   m_TagString: Untagged
@@ -2957,13 +2944,27 @@ Transform:
   m_GameObject: {fileID: 7754209383717798669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2106373840237937404}
   m_Father: {fileID: 726163733413656568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4961566643417286634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754209383717798669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade9dc92efcd24d46b3a05b7d7672229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.5
+  stepsEmitter: {fileID: 3313667891465230403}
 --- !u!1 &8137270931650597122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,7 +3679,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 24015497926545177}
@@ -3734,10 +3735,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35991293
-  m_Height: 4.36559
+  m_Radius: 0.10713339
+  m_Height: 1.7800665
   m_Direction: 1
-  m_Center: {x: 0.0066749454, y: 2.1872091, z: 0.09011203}
+  m_Center: {x: 0, y: 0.8944473, z: -0.009347439}
 --- !u!114 &391844718851537316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3780,11 +3781,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dbafd4d6b392b489cc898348702ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   stairHighRay: {fileID: 6336401435507219766}
   stairLowRay: {fileID: 9052897484787872040}
   stepsEmitter: {fileID: 3313667891465230403}
-  stepsEmissionRatio: 0.2
+  speed: 3
+  stepsEmissionRatio: 0.5
 --- !u!114 &1805455517302566553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3812,7 +3813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 0}
-  camera: {fileID: 0}
+  cameraPhotos: {fileID: 0}
 --- !u!114 &4064048661209462116
 MonoBehaviour:
   m_ObjectHideFlags: 0

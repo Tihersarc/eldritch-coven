@@ -8,7 +8,7 @@ public class MovementBehaviour : MonoBehaviour
 
     [SerializeField] private Transform stairHighRay;
     [SerializeField] private Transform stairLowRay;
-    [SerializeField] StudioEventEmitter stepsEmitter;
+    [SerializeField] private StudioEventEmitter stepsEmitter;
     [SerializeField] private float speed;
     [SerializeField] float stepsEmissionRatio;
     
