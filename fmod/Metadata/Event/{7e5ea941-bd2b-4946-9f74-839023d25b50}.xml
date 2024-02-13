@@ -300,11 +300,11 @@ Walk/Run:
 		</property>
 		<relationship name="automationCurves">
 			<destination>{0f2ff357-f238-43f9-a538-44ea4ea1cbae}</destination>
+			<destination>{3652eedd-526b-44e6-8841-f449cccb0805}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{a4d07b72-b07a-4d8b-a411-519f2b303738}">
 		<relationship name="effects">
-			<destination>{91889f14-db42-41f8-a1c3-6d1d7e8c181a}</destination>
 			<destination>{5adf942b-ab57-45aa-9380-dd6a4a98ba00}</destination>
 		</relationship>
 	</object>
@@ -334,7 +334,15 @@ Walk/Run:
 			<destination>{1be47589-0459-4323-9a6d-c6a3f43b7d72}</destination>
 		</relationship>
 	</object>
-	<object class="GainEffect" id="{91889f14-db42-41f8-a1c3-6d1d7e8c181a}" />
+	<object class="AutomationCurve" id="{3652eedd-526b-44e6-8841-f449cccb0805}">
+		<relationship name="parameter">
+			<destination>{be3b9794-6036-42c1-ae82-25f85a918eb0}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{a5790ec2-024a-4134-8f7f-27d7a3b3c10e}</destination>
+			<destination>{0bde51b0-2109-4512-879c-9d243edaa080}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{5adf942b-ab57-45aa-9380-dd6a4a98ba00}" />
 	<object class="AutomationCurve" id="{64a217db-bce2-4534-aa96-d60f9d5235ed}">
 		<relationship name="parameter">
@@ -360,6 +368,22 @@ Walk/Run:
 		</property>
 		<property name="value">
 			<value>-80</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a5790ec2-024a-4134-8f7f-27d7a3b3c10e}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>10</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{0bde51b0-2109-4512-879c-9d243edaa080}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<property name="value">
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{40c9c5e6-934f-4053-a1e7-02807cb2244a}">

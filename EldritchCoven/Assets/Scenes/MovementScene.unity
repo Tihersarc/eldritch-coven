@@ -1197,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 726163733413656568, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.75
+      value: 10.36
       objectReference: {fileID: 0}
     - target: {fileID: 726163733413656568, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 726163733413656568, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.39
+      value: -4.98
       objectReference: {fileID: 0}
     - target: {fileID: 726163733413656568, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 770301656}
   - component: {fileID: 770301655}
   - component: {fileID: 770301654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2499,7 +2499,7 @@ Transform:
   m_GameObject: {fileID: 1498382998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.49, y: 0.51, z: 0.07}
+  m_LocalPosition: {x: 14.241, y: 0.51, z: 0.07}
   m_LocalScale: {x: 6.6, y: 0.05, z: 7.57}
   m_ConstrainProportionsScale: 0
   m_Children: []

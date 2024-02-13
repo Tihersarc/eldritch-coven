@@ -11,16 +11,27 @@ public class PlayerController : MonoBehaviour
     public delegate void HideObjects();
     public static event HideObjects hideObjects;
 
-    private StairBehaviuor sb;
-    private Vector2 moveInput;
     private MovementBehaviour mvb;
+    private StairBehaviuor stairBehaviour;
+    private StepsPlayer stepsPlayer;
+    
+    private Vector2 moveInput;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
+
+
 
     private void Start()
     {
         mvb = GetComponent<MovementBehaviour>();
-        sb = GetComponent<StairBehaviuor>();
+        stairBehaviour = GetComponent<StairBehaviuor>();
+        stepsPlayer = GetComponentInChildren<StepsPlayer>();
+    }
+
+    private void Update()
+    {
+        //stepsPlayer.MaterialCheck();
+        //GetComponentInChildren<StepsPlayer>().MaterialCheck();
     }
 
     private void FixedUpdate()
@@ -28,7 +39,8 @@ public class PlayerController : MonoBehaviour
         if (moveInput != Vector2.zero)
         {
             mvb.MoveRB(moveInput);
-            sb.StepClimb();
+            stairBehaviour.StepClimb();
+            //stepsPlayer.MaterialCheck(); // TODO Check why sound breaks
         }
         else
         {

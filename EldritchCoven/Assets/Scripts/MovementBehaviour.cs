@@ -1,19 +1,17 @@
 using FMODUnity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementBehaviour : MonoBehaviour
 {
-
-    Rigidbody rb;
-    [SerializeField] private float speed;
+    private Rigidbody rb;
+    private float timeMoving;
 
     [SerializeField] private Transform stairHighRay;
     [SerializeField] private Transform stairLowRay;
     [SerializeField] StudioEventEmitter stepsEmitter;
+    [SerializeField] private float speed;
     [SerializeField] float stepsEmissionRatio;
-    float timeMoving;
+    
 
     private void Start()
     {
@@ -22,7 +20,6 @@ public class MovementBehaviour : MonoBehaviour
 
     private void Update()
     {
-
         if (timeMoving >= stepsEmissionRatio)
         {
             timeMoving = 0;

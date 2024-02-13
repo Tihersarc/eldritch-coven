@@ -1,9 +1,5 @@
-using FMOD.Studio;
 using FMODUnity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class StepsPlayer : MonoBehaviour
 {
@@ -22,22 +18,22 @@ public class StepsPlayer : MonoBehaviour
     void Start()
     {
         mask = LayerMask.GetMask("Ground");
-        MaterialCheck();
+        //MaterialCheck();
     }
 
-    void Update()
-    {
-        Debug.DrawRay(transform.position, Vector3.down, Color.blue);
-    }
+    //void Update()
+    //{
+    //    Debug.DrawRay(transform.position, Vector3.down, Color.blue);
+    //}
 
     public void PlayWalkEvent()
     {
-        //TODO
+        stepsEmitter.SetParameter(paramWalkRun, 0, false);
     }
 
     public void PlayRunEvent()
     {
-        //TODO
+        stepsEmitter.SetParameter(paramWalkRun, 1, false);
     }
 
     public void MaterialCheck()
@@ -57,13 +53,12 @@ public class StepsPlayer : MonoBehaviour
                     terrainValue = 1;
                     break;
                 default:
+                    Debug.LogWarning("No ground material detected");
                     terrainValue = 3;
-                    Debug.LogError("No ground material detected");
                     break;
             }
         }
-        //Debug.Log("Terrain: " + terrainValue);
-        //stepsEmitter.SetParameter(paramWalkRun, // WALK OR RUN //, false);
+
         stepsEmitter.SetParameter(paramTerrain, terrainValue, false);
     }
 }
