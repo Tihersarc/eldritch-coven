@@ -1,4 +1,5 @@
 using FMODUnity;
+using System;
 using UnityEngine;
 
 public class StepsPlayer : MonoBehaviour
@@ -36,29 +37,40 @@ public class StepsPlayer : MonoBehaviour
         stepsEmitter.SetParameter(paramWalkRun, 1, false);
     }
 
-    public void MaterialCheck()
+    public void MaterialCheck(bool debug = false)
     {
         if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, mask))
         {
-            Debug.Log(hit.collider.tag);
+            if (debug) Debug.Log(hit.collider.tag);
             switch (hit.collider.tag)
             {
-                
+
                 case "Wood":
-                    Debug.Log("Inside wood");
+                    if (debug)
+                    {
+                        Debug.Log("Inside wood");
+                    }
                     terrainValue = 0;
                     break;
                 case "Dirt":
-                    Debug.Log("Inside dirt");
+                    if (debug)
+                    {
+                        Debug.Log("Inside dirt");
+                    }
                     terrainValue = 1;
                     break;
                 default:
-                    Debug.LogWarning("No ground material detected");
-                    terrainValue = 3;
+                    if (debug)
+                    {
+                        Debug.LogWarning("No ground material detected");
+                    }
+                    terrainValue = 2;
                     break;
             }
         }
 
-        stepsEmitter.SetParameter(paramTerrain, terrainValue, false);
+        if (debug) Debug.Log("Param" + paramTerrain + " set to " + terrainValue);
+
+        stepsEmitter.SetParameter(paramTerrain, terrainValue, true);
     }
 }

@@ -24,7 +24,7 @@ public class MovementBehaviour : MonoBehaviour
         {
             timeMoving = 0;
             stepsEmitter.Play();
-            GetComponentInChildren<StepsPlayer>().MaterialCheck();
+            GetComponentInChildren<StepsPlayer>().MaterialCheck(); // No funciona antes del Play(). Too bad
         }
     }
 

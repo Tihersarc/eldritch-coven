@@ -1188,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6603143137147974636, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: materialCheckRatio
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 9219246608532508875, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_Name
       value: Player
