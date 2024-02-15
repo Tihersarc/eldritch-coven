@@ -38,6 +38,13 @@ public class PlayerController : MonoBehaviour
 
     void OnTakePhoto(InputValue input)
     {
+        plane.GetComponent<RevealImage>().TakePhoto();
+        StartCoroutine(_TakePhoto());
+    }
+
+    IEnumerator _TakePhoto()
+    {
+        yield return null;
         showHiddenObjects?.Invoke();
         camera.Render();
         plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);

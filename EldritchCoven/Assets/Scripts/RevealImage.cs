@@ -27,12 +27,10 @@ public class RevealImage : MonoBehaviour
         }
     }
 
-    public void OnTakePhoto(InputAction.CallbackContext ctx)
+    //public void OnTakePhoto(InputAction.CallbackContext ctx)
+    public void TakePhoto()
     {
-        if (ctx.performed)
-        {
-            anim.speed = 1;
-            anim.SetTrigger("NewImage");
-        }
+        anim.speed = 0;
+        anim.SetTrigger("NewImage");
     }
 }
