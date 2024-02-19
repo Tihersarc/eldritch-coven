@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AimCamera",
+                    "type": "Button",
+                    "id": "cd9cdece-b992-422e-b075-1f848d1565d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -275,7 +284,7 @@
                 {
                     "name": "",
                     "id": "d4549304-a778-400a-965b-3840ee4add97",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -291,6 +300,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reveal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a441b666-20d0-430c-a7ca-6644b4769202",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
