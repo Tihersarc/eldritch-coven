@@ -27,7 +27,6 @@ public class RevealImage : MonoBehaviour
         }
     }
 
-    //public void OnTakePhoto(InputAction.CallbackContext ctx)
     public void TakePhoto()
     {
         anim.speed = 0;

@@ -5,14 +5,45 @@ using UnityEngine.InputSystem;
 
 public class Polaroid : MonoBehaviour
 {
-    private Animator anim;
     private bool usingCamera = false;
+    [SerializeField]
+    private AnimationTest anim;
+    [SerializeField]
+    private float animationTime = 0;
+    [SerializeField]
+    private float animationDuration = 0.3f;
+    private bool playingAnimation = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        anim = GetComponent<Animator>();
-        anim.speed = 0;
+        anim = GetComponent<AnimationTest>();
+    }
+
+    private void Update()
+    {
+        if (playingAnimation)
+        {
+            if (usingCamera)
+            {
+                animationTime += Time.deltaTime;
+                if (animationTime >= animationDuration)
+                {
+                    animationTime = animationDuration;
+                    playingAnimation = false;
+                }
+            }
+            else
+            {
+                animationTime -= Time.deltaTime;
+                if (animationTime <= 0)
+                {
+                    animationTime = 0;
+                    playingAnimation = false;
+                }
+            }
+
+            anim.slider = animationTime / animationDuration;
+        }
     }
 
     public void OnAimCamera(InputAction.CallbackContext ctx)
@@ -21,14 +52,13 @@ public class Polaroid : MonoBehaviour
         {
             if (usingCamera)
             {
-                anim.speed = -1;
                 usingCamera = false;
             }
             else
             {
-                anim.speed = 1;
                 usingCamera = true;
             }
+            playingAnimation = true;
         }
     }
 }
