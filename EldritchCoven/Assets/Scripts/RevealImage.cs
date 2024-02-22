@@ -12,24 +12,26 @@ public class RevealImage : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    public void StartRevealing()
+    {
+        anim.Play("ImageFade");
+    }
+
     public void OnReveal(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
         {
             anim.ResetTrigger("NewImage");
-            anim.Play("ImageFade");
             anim.speed = 1;
         }
         if (ctx.canceled)
         {
-            //para de reveal the imagen
             anim.speed = 0;
         }
     }
 
     public void TakePhoto()
     {
-        anim.speed = 0;
         anim.SetTrigger("NewImage");
     }
 }

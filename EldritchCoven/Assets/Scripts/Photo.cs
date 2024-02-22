@@ -35,4 +35,22 @@ public class Photo : MonoBehaviour
             anim.SetTrigger("HasTakenPhoto");
         }
     }
+
+    public void OnReveal(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            anim.SetBool("Revealing", true);
+        }
+
+        if (ctx.canceled)
+        {
+            anim.SetBool("Revealing", false);
+        }
+    }
+
+    public void CallRevealImage()
+    {
+        revealImage.StartRevealing();
+    }
 }
