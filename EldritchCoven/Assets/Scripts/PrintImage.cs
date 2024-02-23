@@ -15,12 +15,12 @@ public class PrintImage : MonoBehaviour
     {
         RenderTexture.active = rTexture;
         texture.ReadPixels(new Rect(0, 0, rTexture.width, rTexture.height), 0, 0);
+        Debug.Log("UwU");
     }
 
     public void ApplyTexture()
     {
         texture.Apply();
-
         gameObject.GetComponent<Renderer>().material.mainTexture = texture;
     }
 }
