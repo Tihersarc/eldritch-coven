@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e855fccada7c9409f6ceae8d6b7fb7, type: 3}
   m_Name: Patrol State
   m_EditorClassIdentifier: 
-  isDone: 0
   possibleTransitions:
   - decisionToBeMade: {fileID: 11400000, guid: 8c39143f2b660cf43b77405498ff3548, type: 2}
     onDecisionTrueExitState: {fileID: 11400000, guid: 91b23e479eaf0de488ddbb68175505bc, type: 2}
-    onDecisionFalseExitState: {fileID: 11400000}
+    onDecisionFalseExitState: {fileID: 0}
   range: 20

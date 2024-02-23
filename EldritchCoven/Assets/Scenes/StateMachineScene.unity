@@ -1068,7 +1068,7 @@ MonoBehaviour:
     m_Bits: 65536
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   canSeePlayer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

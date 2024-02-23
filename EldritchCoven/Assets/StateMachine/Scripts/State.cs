@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class State : ScriptableObject {
     protected StateController stateController;
-    public bool isDone = false;
+
     [SerializeField] Transition[] possibleTransitions;
     public abstract void OnEnter();
     public abstract void UpdateState();
