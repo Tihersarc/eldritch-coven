@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovementBehaviour : MonoBehaviour
 {
-
     Rigidbody rb;
     [SerializeField] private float speed;
 
@@ -18,4 +17,5 @@ public class MovementBehaviour : MonoBehaviour
         Vector3 playerVelocity = new Vector3(direction.x, 0, direction.y) * speed;
         rb.velocity = transform.TransformDirection(playerVelocity);
     }
+
 }
