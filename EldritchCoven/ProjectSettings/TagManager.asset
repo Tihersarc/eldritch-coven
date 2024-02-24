@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HiddenObjects
   - Water
   - UI
   - 
@@ -21,7 +21,7 @@ TagManager:
   - 
   - 
   - 
-  - Player
+  - 
   - 
   - 
   - 
