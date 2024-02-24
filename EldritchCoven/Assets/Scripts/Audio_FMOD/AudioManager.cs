@@ -21,8 +21,8 @@ public class AudioManager : MonoBehaviour
     public void Start()
     {
         generalVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + generalVCAPath);
-        sfxVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + musicVCAPath);
-        musicVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + SFXVCAPath);
+        sfxVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + SFXVCAPath);
+        musicVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + musicVCAPath);
 
         if (Instance == null)
         {

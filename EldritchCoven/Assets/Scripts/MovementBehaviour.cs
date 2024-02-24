@@ -17,7 +17,7 @@ public class MovementBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        stepsPlayer = GetComponent<StepsPlayer>();
+        stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
 
     private void Update()

@@ -15,11 +15,38 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638440446594992283
+  lastModified: 638443921542724980
   FileSizes:
   - Name: Desktop
-    Value: 1116
+    Value: 1174
   Exists: 1
+--- !u!114 &-3831678345867788158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/TestMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/TestMusic
+  Guid:
+    Data1: -632799567
+    Data2: 1282529945
+    Data3: 1179899544
+    Data4: 1484534316
+  Banks:
+  - {fileID: 4201003984413487447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 189207
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,12 +66,13 @@ MonoBehaviour:
   - {fileID: 9163351906392017999}
   EditorEvents:
   - {fileID: 9123101010103423487}
+  - {fileID: -3831678345867788158}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5192385441609412451}
   StringsBanks:
   - {fileID: -5043793874795212488}
-  cacheTime: 638440446594992283
+  cacheTime: 638443921571766482
   cacheVersion: 131609
 --- !u!114 &3109636272129982627
 MonoBehaviour:
@@ -85,10 +113,10 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638430102619067146
+  lastModified: 638443921571766482
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 2091872
   Exists: 1
 --- !u!114 &4641048164549253803
 MonoBehaviour:
@@ -129,7 +157,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638440446594972281
+  lastModified: 638443921542714978
   FileSizes:
   - Name: Desktop
     Value: 1374
@@ -178,7 +206,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638440381277003992
+  lastModified: 638443892846471369
   FileSizes:
   - Name: Desktop
     Value: 78944
