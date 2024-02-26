@@ -10,5 +10,5 @@ EditorBuildSettings:
     guid: 77d885ec8817efb4b836f2a37200b6f3
   - enabled: 1
     path: Assets/Scenes/MovementScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 443acb7cc6c35d44c85ac2c89e8f9213
   m_configObjects: {}
