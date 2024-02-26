@@ -5,6 +5,7 @@ public class MovementBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
     private float timeMoving;
+    private StepsPlayer stepsPlayer;
 
     [SerializeField] private Transform stairHighRay;
     [SerializeField] private Transform stairLowRay;
@@ -16,6 +17,7 @@ public class MovementBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
 
     private void Update()
@@ -24,7 +26,7 @@ public class MovementBehaviour : MonoBehaviour
         {
             timeMoving = 0;
             stepsEmitter.Play();
-            GetComponentInChildren<StepsPlayer>().MaterialCheck(); // No funciona antes del Play(). Too bad
+            stepsPlayer.MaterialCheck(); // No funciona antes del Play(). Too bad
         }
     }
 

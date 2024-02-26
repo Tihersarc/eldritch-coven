@@ -68,7 +68,7 @@ Walk/Run:
 			<destination>{09666b7e-baaf-4e47-9388-3ee8d7b24a6a}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{43a2ed9e-2793-491e-82e0-6a415c414beb}</destination>
+			<destination>{1a1b1672-ef53-45d3-a08f-9e68f1e62b1e}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{e4aef86c-8a76-4874-9c65-aaf8e9ebdade}" />
