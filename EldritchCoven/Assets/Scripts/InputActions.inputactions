@@ -1,5 +1,5 @@
 {
-    "name": "Photos",
+    "name": "InputActions",
     "maps": [
         {
             "name": "Player",
@@ -45,6 +45,15 @@
                     "name": "AimCamera",
                     "type": "Button",
                     "id": "cd9cdece-b992-422e-b075-1f848d1565d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenInventory",
+                    "type": "Button",
+                    "id": "b9c4020f-b48d-4244-b600-f10882258d18",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -247,6 +256,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "AimCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "847df985-872c-40e2-9d49-f86274e4b9ee",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
