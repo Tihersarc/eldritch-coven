@@ -11,7 +11,7 @@ public class InventoryMenu : MonoBehaviour
     private float panelXPositionWhenClosed = -100;
     private float panelXPosition;
     [SerializeField]
-    private float panelVelocity;
+    private float panelVelocity = 4;
 
     [SerializeField]
     private RectTransform panelPosition;
