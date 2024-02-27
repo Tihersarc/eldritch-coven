@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 34148106}
   - component: {fileID: 34148104}
   - component: {fileID: 34148109}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 111386204}
   - component: {fileID: 111386202}
   - component: {fileID: 111386207}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 114136196}
   - component: {fileID: 114136194}
   - component: {fileID: 114136199}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7327b2167d53c498e1913ea31f65e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: {fileID: 0}
 --- !u!23 &221745636
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -821,7 +822,7 @@ GameObject:
   - component: {fileID: 224136675}
   - component: {fileID: 224136674}
   - component: {fileID: 224136673}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1601,7 +1602,7 @@ GameObject:
   - component: {fileID: 620703808}
   - component: {fileID: 620703807}
   - component: {fileID: 620703806}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3049,6 +3050,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 615151361}
     m_Modifications:
+    - target: {fileID: 3736052744022395811, guid: 6c30771387b17274eaea3278f905ff1c, type: 3}
+      propertyPath: debug
+      value: 
+      objectReference: {fileID: 114136190}
     - target: {fileID: 5632478939179756188, guid: 6c30771387b17274eaea3278f905ff1c, type: 3}
       propertyPath: m_Name
       value: Photo
@@ -3167,7 +3172,7 @@ GameObject:
   - component: {fileID: 1842328752}
   - component: {fileID: 1842328751}
   - component: {fileID: 1842328750}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
