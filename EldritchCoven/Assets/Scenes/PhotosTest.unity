@@ -1285,6 +1285,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
+<<<<<<< HEAD:EldritchCoven/Assets/Scenes/StateMachineScene.unity
+    m_Bits: 55
+  canSeePlayer: 0
+=======
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
@@ -1371,6 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plane: {fileID: 863416104}
   camera: {fileID: 1323107668}
+>>>>>>> parent of 573af71 (first commit of enemy state machine):EldritchCoven/Assets/Scenes/SampleScene.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
