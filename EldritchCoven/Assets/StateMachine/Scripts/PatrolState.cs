@@ -14,7 +14,6 @@ public class PatrolState : State
     {
         agent = stateController.GetComponent<NavMeshAgent>();
         centrePoint = stateController.transform;
-        Debug.Log("Start Patrol");
     }
 
     public override void OnExit()

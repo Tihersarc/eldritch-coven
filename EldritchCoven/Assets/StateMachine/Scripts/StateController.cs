@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class StateController : MonoBehaviour {
     [SerializeField] State firstState;
     [SerializeField] State currentState;
-    public Enemy enemy;
+    public Enemy enemy;// { get; private set; }
 
     void Start() {
         ChangeState(firstState);
@@ -31,6 +31,8 @@ public class StateController : MonoBehaviour {
         currentState.SetStateController(this);
         currentState.OnEnter();
     }
-    
+    public bool CurrentStateIsDone() {
+        return currentState.isDone;
+    }
 
 }
