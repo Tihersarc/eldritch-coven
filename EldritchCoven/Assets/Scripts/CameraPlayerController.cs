@@ -20,6 +20,16 @@ public class CameraPlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseBehaviour.Instance.IsPaused)
+        {
+            return;
+        }
+
+        MoveCamera();
+    }
+
+    private void MoveCamera()
+    {
         //mouse movement per frame
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;

@@ -6,34 +6,40 @@ using UnityEngine.InputSystem;
 public class PauseBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
-    private bool isPaused;
+    public bool IsPaused { get; private set; }
+
+    private static PauseBehaviour instance;
+    public static PauseBehaviour Instance {  get { return instance; } }
 
     void Start()
     {
-        isPaused = false;
-    }
-
-    private void TogglePause()
-    {
-        if (isPaused)
+        if (instance == null)
         {
-            isPaused = false;
-            Time.timeScale = 1;
-            pauseMenu.SetActive(isPaused);
-            GetComponentInChildren<Camera>().enabled = isPaused;
+            instance = this;
         }
         else
         {
-            isPaused = true;
+            Destroy(this.gameObject);
+        }
+
+        IsPaused = false;
+    }
+
+    public void TogglePause()
+    {
+        if (IsPaused)
+        {
+            IsPaused = false;
+            Time.timeScale = 1;
+            pauseMenu.SetActive(IsPaused);
+        }
+        else
+        {
+            IsPaused = true;
             Time.timeScale = 0;
-            pauseMenu.SetActive(isPaused);
-            GetComponentInChildren<Camera>().enabled = isPaused;
+            pauseMenu.SetActive(IsPaused);
         }
     }
 
-    void OnPause(InputValue input)
-    {
-        TogglePause();
-        
-    }
+    
 }

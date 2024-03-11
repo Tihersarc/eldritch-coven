@@ -60,4 +60,9 @@ public class PlayerController : MonoBehaviour
         plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
         hideObjects?.Invoke();
     }
+
+    void OnPause(InputValue input)
+    {
+        PauseBehaviour.Instance.TogglePause();
+    }
 }
