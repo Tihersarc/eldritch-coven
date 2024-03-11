@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
         moveInput = input.Get<Vector2>();
     }
 
-    void OnTakePhoto(InputValue input)
-    {
-        showHiddenObjects?.Invoke();
-        camera.Render();
-        plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);
-        hideObjects?.Invoke();
-    }
+    //void OnTakePhoto(InputValue input)
+    //{
+    //    showHiddenObjects?.Invoke();
+    //    camera.Render();
+    //    plane.GetComponent<PrintImage>().ConvertToImage(camera.targetTexture);
+    //    hideObjects?.Invoke();
+    //}
 }
