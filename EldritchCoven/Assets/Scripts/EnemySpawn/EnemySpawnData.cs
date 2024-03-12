@@ -15,4 +15,9 @@ public class EnemySpawnData : MonoBehaviour
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         Instantiate(enemies[(int)Random.Range(0, propsMeshes.Length)].gameObject, this.transform.position, enemyRotation);
     }
+
+    private void OnEnable()
+    {
+        EnemySpawnManager.instance.spawners.Add(this);
+    }
 }
