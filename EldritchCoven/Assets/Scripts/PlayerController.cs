@@ -12,19 +12,27 @@ public class PlayerController : MonoBehaviour
     public static event HideObjects hideObjects;
 
     private MovementBehaviour mvb;
-    private StairBehaviuor stairBehaviour;
+    private StairBehaviour stairBehaviour;
     //private StepsPlayer stepsPlayer;
 
     private Vector2 moveInput;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
 
+    private PlayerInput playerInput;
+    private InputActionMap playerMap;
 
 
     private void Start()
     {
         mvb = GetComponent<MovementBehaviour>();
-        stairBehaviour = GetComponent<StairBehaviuor>();
+        stairBehaviour = GetComponent<StairBehaviour>();
+        playerInput = GetComponent<PlayerInput>();
+
+        playerMap = playerInput.actions.FindActionMap("Player");
+
+        EnableActionMaps();
+
         //stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
 
@@ -48,8 +56,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void EnableActionMaps()
+    {
+        playerMap.Enable();
+        playerInput.actions.FindActionMap("Pause").Enable();
+        Debug.Log("Maps activated");
+    }
+
     void OnMove(InputValue input)
     {
+
         moveInput = input.Get<Vector2>();
     }
 
@@ -64,5 +80,13 @@ public class PlayerController : MonoBehaviour
     void OnPause(InputValue input)
     {
         PauseBehaviour.Instance.TogglePause();
+        if (PauseBehaviour.Instance.IsPaused)
+        {
+            playerMap.Disable();
+        }
+        else
+        {
+            //playerMap.Enable();
+        }
     }
 }
