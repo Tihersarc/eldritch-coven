@@ -21,6 +21,7 @@ public class RevealImage : MonoBehaviour
     {
         if (ctx.performed)
         {
+            Debug.Log("OwO");
             anim.ResetTrigger("NewImage");
             anim.speed = 1;
         }
