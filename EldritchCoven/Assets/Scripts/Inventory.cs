@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
 
     public void NextItem()
     {
-        Destroy(hand.transform.GetChild(0).GetComponent<GameObject>());
+        Destroy(hand.transform.GetChild(0).gameObject);
         Instantiate(objetcsInInventory[currentItem], hand.transform);
     }
 
@@ -42,10 +42,6 @@ public class Inventory : MonoBehaviour
             {
                 currentItem = objetcsInInventory.Count - 1;
             }
-            else
-            {
-                currentItem--;
-            }
             objectInHandAnim.SetTrigger("TriggerObject");
         }
 
@@ -55,11 +51,8 @@ public class Inventory : MonoBehaviour
             {
                 currentItem = 0;
             }
-            else
-            {
-                currentItem++;
-            }
             objectInHandAnim.SetTrigger("TriggerObject");
         }
+
     }
 }
