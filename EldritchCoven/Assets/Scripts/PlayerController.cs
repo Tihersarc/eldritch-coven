@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
 
-
-
     private void Start()
     {
         mvb = GetComponent<MovementBehaviour>();
