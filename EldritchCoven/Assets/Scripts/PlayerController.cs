@@ -65,28 +65,25 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue input)
     {
-
-        moveInput = input.Get<Vector2>();
+        if (!PauseBehaviour.Instance.IsPaused)
+        {
+            moveInput = input.Get<Vector2>();
+        }
     }
 
     void OnTakePhoto(InputValue input)
     {
-        showHiddenObjects?.Invoke();
-        cameraPhotos.Render();
-        plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
-        hideObjects?.Invoke();
+        if (!PauseBehaviour.Instance.IsPaused)
+        {
+            showHiddenObjects?.Invoke();
+            cameraPhotos.Render();
+            plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
+            hideObjects?.Invoke();
+        }
     }
 
     void OnPause(InputValue input)
     {
         PauseBehaviour.Instance.TogglePause();
-        if (PauseBehaviour.Instance.IsPaused)
-        {
-            playerMap.Disable();
-        }
-        else
-        {
-            //playerMap.Enable();
-        }
     }
 }

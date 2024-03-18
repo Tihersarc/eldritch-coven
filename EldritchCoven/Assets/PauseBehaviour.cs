@@ -32,12 +32,22 @@ public class PauseBehaviour : MonoBehaviour
             IsPaused = false;
             Time.timeScale = 1;
             pauseMenu.SetActive(IsPaused);
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+
+            Debug.Log("Game is NOT paused");
         }
         else
         {
             IsPaused = true;
             Time.timeScale = 0;
             pauseMenu.SetActive(IsPaused);
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+            Debug.Log("Game is paused");
         }
     }
 
