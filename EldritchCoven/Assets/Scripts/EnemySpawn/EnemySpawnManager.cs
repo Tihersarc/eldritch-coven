@@ -31,17 +31,27 @@ public class EnemySpawnManager : MonoBehaviour
         return enemySpawnManager;
     }
 
-    public List<EnemySpawnData> spawners = new List<EnemySpawnData>();
+    public List<EnemySpawner> spawners = new List<EnemySpawner>();
+    [SerializeField] int spawnTime;
+    float currentTimeToSpawn;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        currentTimeToSpawn = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if( currentTimeToSpawn > spawnTime )
+        {
+            EnemySpawner enemy = spawners[Random.Range(0, spawners.Count)];
+            enemy.Spawn();
+            currentTimeToSpawn = 0f;
+        }
+        else
+        {
+            currentTimeToSpawn += Time.deltaTime;
+        }
     }
 }
