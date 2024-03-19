@@ -30,22 +30,28 @@ public class Photo : MonoBehaviour
 
     public void OnTakePhoto(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (!PauseBehaviour.Instance.IsPaused)
         {
-            anim.SetTrigger("HasTakenPhoto");
+            if (ctx.performed)
+            {
+                anim.SetTrigger("HasTakenPhoto");
+            }
         }
     }
 
     public void OnReveal(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (!PauseBehaviour.Instance.IsPaused)
         {
-            anim.SetBool("Revealing", true);
-        }
+            if (ctx.performed)
+            {
+                anim.SetBool("Revealing", true);
+            }
 
-        if (ctx.canceled)
-        {
-            anim.SetBool("Revealing", false);
+            if (ctx.canceled)
+            {
+                anim.SetBool("Revealing", false);
+            }
         }
     }
 

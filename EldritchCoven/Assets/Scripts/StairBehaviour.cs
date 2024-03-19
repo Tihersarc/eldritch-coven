@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StairBehaviuor : MonoBehaviour
+public class StairBehaviour : MonoBehaviour
 {
     Rigidbody rigidBody;
     [SerializeField] GameObject stepRayUpper;
