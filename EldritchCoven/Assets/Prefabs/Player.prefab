@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 2425489838773444172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.779, z: -1.486}
+  m_LocalPosition: {x: 0, y: 1.779, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3784,6 +3784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelXPositionWhenOpen: 100
   panelXPositionWhenClosed: -100
+  panelVelocity: 4
   panelPosition: {fileID: 0}
 --- !u!114 &6603143137147974636
 MonoBehaviour:
