@@ -35,8 +35,6 @@ public class PauseBehaviour : MonoBehaviour
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-
-            Debug.Log("Game is NOT paused");
         }
         else
         {
@@ -46,8 +44,6 @@ public class PauseBehaviour : MonoBehaviour
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-
-            Debug.Log("Game is paused");
         }
     }
 

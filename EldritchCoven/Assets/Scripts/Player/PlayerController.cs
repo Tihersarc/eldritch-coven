@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
+    [SerializeField] private StudioEventEmitter cameraSoundEmitter;
+
 
     private PlayerInput playerInput;
 
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
             cameraPhotos.Render();
             plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
             hideObjects?.Invoke();
+            cameraSoundEmitter.Play();
         }
     }
 

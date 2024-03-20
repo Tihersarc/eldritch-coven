@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,9 @@ using UnityEngine.InputSystem;
 public class Polaroid : MonoBehaviour
 {
     private bool usingCamera = false;
-    [SerializeField]
-    private AnimationTest anim;
-    [SerializeField]
-    private float animationTime = 0;
-    [SerializeField]
-    private float animationDuration = 0.3f;
+    [SerializeField] private AnimationTest anim;
+    [SerializeField] private float animationTime = 0;
+    [SerializeField] private float animationDuration = 0.3f;
     private bool playingAnimation = false;
 
     private void Start()
