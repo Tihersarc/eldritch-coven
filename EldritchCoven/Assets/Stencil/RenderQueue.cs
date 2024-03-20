@@ -5,16 +5,16 @@ using UnityEngine;
 [ExecuteAlways]
 public class RenderQueue : MonoBehaviour
 {
-    Renderer renderer;
+    Renderer rendererObj;
 
     private void OnEnable()
     {
-        renderer = GetComponent<Renderer>();
+        rendererObj = GetComponent<Renderer>();
         
     }
 
     private void Update()
     {
-        renderer.sharedMaterial.renderQueue = 2000 + renderer.sharedMaterial.GetInt("_StencilID");
+        rendererObj.sharedMaterial.renderQueue = 2000 + rendererObj.sharedMaterial.GetInt("_StencilID");
     }
 }

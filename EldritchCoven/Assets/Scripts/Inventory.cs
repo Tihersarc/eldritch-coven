@@ -21,9 +21,12 @@ public class Inventory : MonoBehaviour
 
     public void OnChangeItem(InputValue input)
     {
-        if (input.Get<Vector2>().y < 0)
+        if (!PauseBehaviour.Instance.IsPaused)
         {
-            objectInHandAnim.SetTrigger("TriggerObject");
+            if (input.Get<Vector2>().y < 0)
+            {
+                objectInHandAnim.SetTrigger("TriggerObject");
+            }
         }
     }
 }
