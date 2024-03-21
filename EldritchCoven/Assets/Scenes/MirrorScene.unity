@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &260100458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260100460}
+  - component: {fileID: 260100459}
+  m_Layer: 0
+  m_Name: MirrorTextureSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &260100459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260100458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a795db26d163243498862e0ad3e95fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrors:
+  - {fileID: 1259977634}
+--- !u!4 &260100460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260100458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 124.12588, y: 0.465981, z: 62.62476}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775608827
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +606,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1593404041626059654, guid: 57bd8550a0bd56043b4cf84a1b42606c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bf108e3d7ddd57446bffa1e7213dd757, type: 2}
     - target: {fileID: 3447057624579697009, guid: 57bd8550a0bd56043b4cf84a1b42606c, type: 3}
       propertyPath: m_Name
       value: Mirror
@@ -693,6 +743,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1259977634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3447057624579697009, guid: 57bd8550a0bd56043b4cf84a1b42606c, type: 3}
+  m_PrefabInstance: {fileID: 1183389644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1298123643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,3 +895,4 @@ SceneRoots:
   - {fileID: 1183389644}
   - {fileID: 1057329623}
   - {fileID: 1300486450}
+  - {fileID: 260100460}
