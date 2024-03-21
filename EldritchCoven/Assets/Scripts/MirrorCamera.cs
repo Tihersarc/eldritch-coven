@@ -25,12 +25,12 @@ public class MirrorCamera : MonoBehaviour
         this.transform.forward = mirrorForward;
         transform.position = cameraMirrorPosition;
 
+        ChangeNearClipPlanes();
     }
 
     private void OnPreCull()
     {
         ChangeNearClipPlanes();
-        Debug.Log("hola");
     }
 
     private void ChangeNearClipPlanes()
@@ -39,7 +39,7 @@ public class MirrorCamera : MonoBehaviour
         int dot = System.Math.Sign(Vector3.Dot(clipPlane.forward, this.transform.parent.position - this.transform.position));
 
         Vector3 camSpacePos = this.GetComponent<Camera>().worldToCameraMatrix.MultiplyPoint(clipPlane.position);
-        Vector3 camSpaceNormal = this.GetComponent<Camera>().worldToCameraMatrix.MultiplyVector(-clipPlane.forward) * dot;
+        Vector3 camSpaceNormal = this.GetComponent<Camera>().worldToCameraMatrix.MultiplyVector(clipPlane.forward) * dot;
         float camSpaceDst = -Vector3.Dot(camSpacePos, camSpaceNormal) + nearClipOffset;
 
         // Impide usar oblique clip plane quando esta cerca del portal ya que causa problemas
