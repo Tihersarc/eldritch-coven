@@ -1,20 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MirrorCamera : MonoBehaviour
 {
-    Camera referenceCam;
+    Transform playerCameraTransform;
+    [SerializeField] Transform mirror;
 
     void Start()
     {
-        referenceCam = Camera.main;
+        playerCameraTransform = Camera.main.transform;
+        CameraPlayerController.onRotateCamera += RotateCamera;
     }
 
     void Update()
     {
-        Vector3 reflectedVector = Vector3.Reflect(referenceCam.transform.forward, this.transform.parent.forward);
-        
+        Vector3 mirrorPosition = playerCameraTransform.position - 2 * Vector3.Dot(playerCameraTransform.position - mirror.position, mirror.forward) * mirror.forward;
+        transform.position = mirrorPosition;
+    }
+
+    void RotateCamera(Quaternion rotation)
+    {
+        transform.localRotation = rotation;
     }
 }
