@@ -3655,9 +3655,10 @@ GameObject:
   - component: {fileID: 3458464929939674132}
   - component: {fileID: 4064048661209462116}
   - component: {fileID: 3376226939357797352}
+  - component: {fileID: 376344190982550242}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3885,6 +3886,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd210c2e713b8649a21a55e6f465718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  interactableDistance: 0
   plane: {fileID: 7206085399224096012}
   cameraPhotos: {fileID: 1658762737371806898}
   cameraSoundEmitter: {fileID: 0}
@@ -3917,6 +3922,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHandAnim: {fileID: 2615307276960453311}
+--- !u!114 &376344190982550242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219246608532508875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1206950834502464106
 PrefabInstance:
   m_ObjectHideFlags: 0

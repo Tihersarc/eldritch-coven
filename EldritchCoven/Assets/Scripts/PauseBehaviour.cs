@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PauseBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
-    public bool IsPaused { get; private set; }
+    public bool IsPaused { get; set; }
 
     private static PauseBehaviour instance;
     public static PauseBehaviour Instance {  get { return instance; } }
