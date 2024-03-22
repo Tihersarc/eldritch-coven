@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00cb9dd42073a741a57b4421d2b81cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 7207260134371222598}
 --- !u!65 &5751446554592710235
 BoxCollider:
   m_ObjectHideFlags: 0
