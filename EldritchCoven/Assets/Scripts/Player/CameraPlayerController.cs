@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraPlayerController : MonoBehaviour
 {
+    public static Action<Quaternion> onRotateCamera;
+    public static Action onMoveCamera;
     private Camera playerCamera;
     [SerializeField] private float sensitivity = 2.0f;
     [SerializeField] private float rotLimit = 45.0f;
@@ -40,6 +43,7 @@ public class CameraPlayerController : MonoBehaviour
 
         //camera rotation
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        
         //transform.Rotate(Vector3.up * mouseX);
         Quaternion rotation = Quaternion.Euler(0, mouseX * sensitivity, 0);
         rb.MoveRotation(rb.rotation * rotation);

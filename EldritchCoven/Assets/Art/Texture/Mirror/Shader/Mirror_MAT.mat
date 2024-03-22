@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaskSurfaceMat
-  m_Shader: {fileID: 4800000, guid: 30b2cbb70ed14e049b9c82c614b46536, type: 3}
+  m_Name: Mirror_MAT
+  m_Shader: {fileID: 4800000, guid: 8653be07aad304d4e90f01c034a508db, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,12 +24,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8400000, guid: 8a98009faad73f0458d7e166ef4bfa8f, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - StencilID: 1
-    - _StencilID: 1
+    - StencilID: 3
     m_Colors: []
   m_BuildTextureStacks: []
