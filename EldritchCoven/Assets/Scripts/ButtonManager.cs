@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,6 +36,8 @@ public class ButtonManager : MonoBehaviour
         return buttonManager;
     }
 
+    public static Action onWin;
+
     public void AddButtonToCurrentSequence(Button newButton)
     {
         bool equals = true;
@@ -51,6 +54,7 @@ public class ButtonManager : MonoBehaviour
             if (equals)
             {
                 Debug.Log("win");
+                onWin.Invoke();
             }
             else
             {
