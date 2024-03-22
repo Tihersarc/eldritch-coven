@@ -14,6 +14,7 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] Transform cameraEndPoint;
     Vector3 initialCameraPosition;
     [SerializeField] Transform[] spawnPoints;
+    bool onEnd = false;
 
     public UnityEvent onTimeOut;
 
@@ -34,7 +35,14 @@ public class CountdownTimer : MonoBehaviour
         }
         else
         {
-            Instantiate(monster, spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position, Quaternion.identity);
+            if (!onEnd)
+            {
+                Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
+                Instantiate(monster, spawnPoint.position, spawnPoint.rotation);
+                onEnd = true;
+            }
+                
+
             onTimeOut.Invoke();
         }
     }

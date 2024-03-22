@@ -8,4 +8,9 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public FieldOfView fov;
     public GameObject player;
+
+    private void Awake()
+    {
+        player = FindAnyObjectByType<PlayerController>().gameObject;
+    }
 }
