@@ -13827,7 +13827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: Button_1 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15530,7 +15530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
       propertyPath: m_Name
-      value: Button (4)
+      value: Button_3 (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23540,7 +23540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: Button_4 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27138,9 +27138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons:
   - {fileID: 804108026}
-  - {fileID: 1181700004}
   - {fileID: 1038107882}
   - {fileID: 1411661479}
+  - {fileID: 1181700004}
 --- !u!4 &1617909434
 Transform:
   m_ObjectHideFlags: 0
@@ -39046,7 +39046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
       propertyPath: m_Name
-      value: Button (3)
+      value: Button_2 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
