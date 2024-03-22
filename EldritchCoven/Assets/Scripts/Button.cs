@@ -9,7 +9,7 @@ public class Button : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log("lol");
         anim.Play();
+        ButtonManager.instance.AddButtonToCurrentSequence(this);
     }
 }
