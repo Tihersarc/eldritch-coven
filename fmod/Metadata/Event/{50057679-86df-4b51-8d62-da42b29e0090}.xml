@@ -5,7 +5,7 @@
 			<value>Ambience</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<relationship name="folder">
 			<destination>{64d295f4-50c6-4d00-921a-618e8b0192a8}</destination>
@@ -127,7 +127,7 @@
 			<value>108.56002083333334</value>
 		</property>
 		<property name="volume">
-			<value>-23</value>
+			<value>-17.5</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
@@ -224,7 +224,6 @@
 	<object class="MixerBusEffectChain" id="{c5fa8638-487f-40ee-bf28-6eeb2c6fd434}">
 		<relationship name="effects">
 			<destination>{1488b87a-68a0-4af2-942f-71e574384808}</destination>
-			<destination>{9d6dd6a9-08ae-4042-a9a1-8af2690e051a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d2bf34ee-7807-489a-a304-18c24674dd80}" />
@@ -278,7 +277,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{1488b87a-68a0-4af2-942f-71e574384808}" />
-	<object class="SpatialiserEffect" id="{9d6dd6a9-08ae-4042-a9a1-8af2690e051a}" />
 	<object class="AutomationPoint" id="{60cd0d84-bcce-40d4-824a-3230766bac36}">
 		<property name="position">
 			<value>0</value>
