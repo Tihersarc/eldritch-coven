@@ -10094,6 +10094,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3313667891465230403, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/SFX/MirrorShattering
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313667891465230403, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 707371867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313667891465230403, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1215401081
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313667891465230403, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 737387409
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313667891465230403, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -445647082
+      objectReference: {fileID: 0}
     - target: {fileID: 3458464929939674132, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: cameraSoundEmitter
       value: 
