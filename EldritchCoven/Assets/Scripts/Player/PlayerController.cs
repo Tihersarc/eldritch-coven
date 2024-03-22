@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     private StairBehaviour stairBehaviour;
     //private StepsPlayer stepsPlayer;
 
+    [SerializeField]
+    private LayerMask interactableLayers;
+    [SerializeField]
+    private float interactableDistance;
+
     private Vector2 moveInput;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
@@ -84,5 +89,22 @@ public class PlayerController : MonoBehaviour
     void OnPause(InputValue input)
     {
         PauseBehaviour.Instance.TogglePause();
+    }
+
+    void OnInteract(InputValue input)
+    {
+        if (!PauseBehaviour.Instance.IsPaused)
+        {
+            RaycastHit hit;
+            Button button;
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
+            {
+                if (hit.transform.TryGetComponent<Button>(out button))
+                {
+                    button.Interact();
+                }
+            }
+            
+        }
     }
 }
