@@ -1,5 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6927301123376457918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Camera/PhotoSound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Camera/PhotoSound
+  Guid:
+    Data1: 1961860501
+    Data2: 1076623373
+    Data3: -107047536
+    Data4: 468974101
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5775570940855751753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/MirrorShattering
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/MirrorShattering
+  Guid:
+    Data1: 707371867
+    Data2: 1215401081
+    Data3: 737387409
+    Data4: -445647082
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5077590326661398476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/WalkRun
+  m_EditorClassIdentifier: 
+  Name: WalkRun
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 797570713
+    data2: 1294958600
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5043793874795212488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +93,10 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638467203169922199
+  lastModified: 638467217278653674
   FileSizes:
   - Name: Desktop
-    Value: 1222
+    Value: 1344
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -38,15 +116,17 @@ MonoBehaviour:
   - {fileID: 4201003984413487447}
   - {fileID: 9163351906392017999}
   EditorEvents:
-  - {fileID: 9123101010103423487}
   - {fileID: 7215185310336062}
-  - {fileID: 5778310960542770195}
+  - {fileID: -5775570940855751753}
+  - {fileID: 1906782345669528497}
+  - {fileID: 5228396089832509442}
+  - {fileID: -6927301123376457918}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5192385441609412451}
   StringsBanks:
   - {fileID: -5043793874795212488}
-  cacheTime: 638467203169931918
+  cacheTime: 638467217297288799
   cacheVersion: 131609
 --- !u!114 &7215185310336062
 MonoBehaviour:
@@ -75,7 +155,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 189207
---- !u!114 &3109636272129982627
+--- !u!114 &1906782345669528497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,21 +164,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/WalkRun
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambience/Ambience
   m_EditorClassIdentifier: 
-  Name: WalkRun
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 797570713
-    data2: 1294958600
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Music/Ambience/Ambience
+  Guid:
+    Data1: 1342535289
+    Data2: 1263634143
+    Data3: 1121608333
+    Data4: -1879007566
+  Banks:
+  - {fileID: 4201003984413487447}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108560
 --- !u!114 &4201003984413487447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,12 +197,61 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638457822594199424
+  lastModified: 638467217296656265
   FileSizes:
   - Name: Desktop
-    Value: 2091872
+    Value: 4408736
   Exists: 1
---- !u!114 &4641048164549253803
+--- !u!114 &5192385441609412451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../fmod/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638467217278623646
+  FileSizes:
+  - Name: Desktop
+    Value: 1374
+  Exists: 1
+--- !u!114 &5228396089832509442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footsteps
+  Guid:
+    Data1: 2120132929
+    Data2: 1229372715
+    Data3: -1870433121
+    Data4: 1348194851
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5077590326661398476}
+  - {fileID: 8380169738236796896}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8380169738236796896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,82 +275,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5192385441609412451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../fmod/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638457822594119193
-  FileSizes:
-  - Name: Desktop
-    Value: 1374
-  Exists: 1
---- !u!114 &5778310960542770195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Camera/PhotoSound
-  m_EditorClassIdentifier: 
-  Path: event:/Camera/PhotoSound
-  Guid:
-    Data1: 1961860501
-    Data2: 1076623373
-    Data3: -107047536
-    Data4: 468974101
-  Banks:
-  - {fileID: 9163351906392017999}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9123101010103423487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Footsteps
-  Guid:
-    Data1: 2120132929
-    Data2: 1229372715
-    Data3: -1870433121
-    Data4: 1348194851
-  Banks:
-  - {fileID: 9163351906392017999}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 4641048164549253803}
-  - {fileID: 3109636272129982627}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &9163351906392017999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +290,8 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638467203169931918
+  lastModified: 638467217297288799
   FileSizes:
   - Name: Desktop
-    Value: 109920
+    Value: 144800
   Exists: 1

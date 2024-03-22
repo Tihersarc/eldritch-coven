@@ -5,7 +5,7 @@
 			<value>Camera</value>
 		</property>
 		<relationship name="folder">
-			<destination>{79a150b6-097d-42e9-ab4a-4b1c08126296}</destination>
+			<destination>{2aac560b-993c-48c0-8893-868d4358c825}</destination>
 		</relationship>
 	</object>
 </objects>

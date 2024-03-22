@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{08cfc6a9-2415-4d0a-9f52-ad4d2a9113ac}">
+		<property name="assetPath">
+			<value>Music/Ambience/Ambience_Sting.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{bc668439-ddd6-4a69-a9a3-dfcabad9eaa8}</destination>
+		</relationship>
+	</object>
+</objects>
