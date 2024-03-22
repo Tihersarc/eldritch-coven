@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3d03176c-a54f-4f68-a56b-414baddf435b}">
+		<property name="assetPath">
+			<value>Music/Ambience/Ambience_Grotesqueries.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>32</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{bc668439-ddd6-4a69-a9a3-dfcabad9eaa8}</destination>
+		</relationship>
+	</object>
+</objects>

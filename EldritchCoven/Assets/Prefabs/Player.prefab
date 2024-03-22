@@ -483,7 +483,7 @@ MonoBehaviour:
       Data2: 1229372715
       Data3: -1870433121
       Data4: 1348194851
-    Path: event:/Player/Footsteps
+    Path: event:/SFX/Player/Footsteps
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -2890,7 +2890,7 @@ MonoBehaviour:
       Data2: 1076623373
       Data3: -107047536
       Data4: 468974101
-    Path: event:/Camera/PhotoSound
+    Path: event:/SFX/Camera/PhotoSound
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -3823,7 +3823,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 2fefaf0f-c12c-42ab-ad28-44026646e58c
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &7560573767942068480
@@ -3887,6 +3887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plane: {fileID: 7206085399224096012}
   cameraPhotos: {fileID: 1658762737371806898}
+  cameraSoundEmitter: {fileID: 0}
 --- !u!114 &4064048661209462116
 MonoBehaviour:
   m_ObjectHideFlags: 0

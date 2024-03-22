@@ -59,7 +59,11 @@
 			<destination>{43a2ed9e-2793-491e-82e0-6a415c414beb}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{c846bea1-fe40-44c3-bc93-3ffbf2a1db23}" />
+	<object class="EventAutomatableProperties" id="{c846bea1-fe40-44c3-bc93-3ffbf2a1db23}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{bf93ad50-de4e-4996-ba50-bb05c9052e5d}" />
 	<object class="Timeline" id="{00f95821-7e85-41ea-9714-4b56e7c35959}">
 		<property name="isProxyEnabled">
@@ -109,7 +113,7 @@
 	<object class="MixerBusFader" id="{8166062c-33b0-4ab5-b8fc-a788d86c45e3}" />
 	<object class="SFXReverbEffect" id="{150a5dc0-25b4-460a-9036-bd2fd744878e}">
 		<property name="decayTime">
-			<value>3800</value>
+			<value>2700</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{58e46314-2a58-4a81-af2e-f0d44016a1a5}" />
