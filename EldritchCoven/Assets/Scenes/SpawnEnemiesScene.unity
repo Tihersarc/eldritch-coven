@@ -566,7 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91c765eb449a5545b77aafb2960b4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawners: []
+  spawners:
+  - {fileID: 6438536374739087885, guid: cde85d5e00d22174fbf0930916e7f8e0, type: 3}
   spawnTime: 50
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

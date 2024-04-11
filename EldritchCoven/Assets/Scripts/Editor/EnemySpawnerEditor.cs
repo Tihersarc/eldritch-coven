@@ -15,7 +15,6 @@ public class EnemySpawnerEditor : Editor
             {
                 enemy.RemoveSpawner();
             }
-                UnityEngine.Debug.Log("hola");
         }
     }
 }
