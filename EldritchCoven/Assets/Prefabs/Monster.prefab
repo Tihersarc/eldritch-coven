@@ -66,21 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343ac83f903b94a4b95fdc1622275cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onKill:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3871309544004699205, guid: c64421b923d90be4699e9649287b8903, type: 3}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: SetEndStatus
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &5688220255907940944
 GameObject:
   m_ObjectHideFlags: 0

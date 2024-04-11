@@ -18,12 +18,12 @@ public class HiddenObjects : MonoBehaviour
         gameObject.layer = layerToHide;
     }
 
-    private void ShowHiddenObject()
+    public void ShowHiddenObject()
     {
         gameObject.layer = layerToShow;
     }
 
-    private void HideObject()
+    public void HideObject()
     {
         gameObject.layer = layerToHide;
     }
