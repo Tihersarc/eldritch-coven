@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         {
             moveInput = input.Get<Vector2>();
         }
+        moveInput = input.Get<Vector2>();
     }
 
     void OnTakePhoto(InputValue input)

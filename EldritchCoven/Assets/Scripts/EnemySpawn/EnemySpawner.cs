@@ -44,12 +44,6 @@ public class EnemySpawner : MonoBehaviour
         spawnedEnemy.GetComponent<StateController>().enabled = true;
     }
 
-    //private void OnEnable()
-    //{
-    //    EnemySpawnManager.instance.spawners.Add(this);
-    //}
-
-
     public void RemoveSpawner()
     {
 #if UNITY_EDITOR

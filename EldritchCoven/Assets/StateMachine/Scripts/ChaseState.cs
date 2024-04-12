@@ -17,6 +17,6 @@ public class ChaseState : State
 
     public override void UpdateState()
     {
-        stateController.enemy.agent.SetDestination(stateController.enemy.player.transform.position);
+        //stateController.enemy.agent.SetDestination(stateController.enemy.player.transform.position);
     }
 }

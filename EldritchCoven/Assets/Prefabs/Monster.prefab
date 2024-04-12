@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4762056012296510080}
   - component: {fileID: 8825855605991560402}
   - component: {fileID: 2501648361406008901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,8 +78,9 @@ GameObject:
   - component: {fileID: 2040604319182501948}
   - component: {fileID: 6944892211593760274}
   - component: {fileID: 1939651296041830418}
+  - component: {fileID: 527466131061900421}
   - component: {fileID: 5561119040269763756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,6 +156,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   canSeePlayer: 0
+--- !u!114 &527466131061900421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688220255907940944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc1349e589289449a5ce9d2ce9cc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &5561119040269763756
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -236,6 +249,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8d2dd71e7dd710646be5c7086c8592bd, type: 3}
       propertyPath: m_Name
       value: BichoRedFase2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d2dd71e7dd710646be5c7086c8592bd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
