@@ -22,7 +22,9 @@ public class EnemySpawner : MonoBehaviour
 
     public void InstantiateEnemy()
     {
+
         this.GetComponent<MeshFilter>().mesh = propsMeshes[(int)Random.Range(0, propsMeshes.Length)];
+        Debug.Log(this.GetComponent<MeshFilter>().mesh);
 
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);

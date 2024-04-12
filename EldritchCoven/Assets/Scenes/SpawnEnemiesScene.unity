@@ -359,6 +359,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &568018751 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2615307276960453311, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+  m_PrefabInstance: {fileID: 693169608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &693169608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,6 +412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4180270023597555159, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
+      propertyPath: objectInHandAnim
+      value: 
+      objectReference: {fileID: 568018751}
     - target: {fileID: 7560573767942068480, guid: 51a23aaade5cd134599300290dacae3b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -767,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnManager: {fileID: 2042661178}
   propsMeshes:
-  - {fileID: -6657180443270484345, guid: 51322180901897440ba89fc9a17e0775, type: 3}
+  - {fileID: -5495902117074765545, guid: 659aaf20a6c9ea04faa2a38102b80b8e, type: 3}
   enemies:
   - {fileID: 2040604319182501948, guid: e0a0da91a9f6f08468cba99dc37bf087, type: 3}
   spawnPoint: {fileID: 165289423}
