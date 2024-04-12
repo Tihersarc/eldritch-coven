@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
+    [SerializeField] GameObject enemySpawnerPrefab;
     private static EnemySpawnManager enemySpawnManager;
 
     public static EnemySpawnManager instance
@@ -58,5 +59,10 @@ public class EnemySpawnManager : MonoBehaviour
         {
             currentTimeToSpawn += Time.deltaTime;
         }
+    }
+
+    public GameObject GetSpawnerPrefab()
+    {
+        return enemySpawnerPrefab;
     }
 }
