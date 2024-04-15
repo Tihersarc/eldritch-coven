@@ -5,27 +5,27 @@ using Unity.VisualScripting;
 using UnityEditor;
 #endif
 
-[RequireComponent(typeof(MeshFilter))]
-[RequireComponent(typeof(MeshRenderer))]
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] EnemySpawnManager spawnManager;
-    [SerializeField] Mesh[] propsMeshes;
+    [SerializeField] GameObject[] props;
     [SerializeField] Enemy[] enemies;
     [SerializeField] Transform spawnPoint;
     GameObject spawnedEnemy;
 
     private void Start()
     {
-        InstantiateEnemy();
+        InstantiateHiddenEnemy();
+        InstantiateProp();
     }
 
-    public void InstantiateEnemy()
+    private void InstantiateProp()
     {
+        Instantiate(props[(int)Random.Range(0, props.Length)], this.gameObject.transform);
+    }
 
-        this.GetComponent<MeshFilter>().mesh = propsMeshes[(int)Random.Range(0, propsMeshes.Length)];
-        Debug.Log(this.GetComponent<MeshFilter>().mesh);
-
+    public void InstantiateHiddenEnemy()
+    {
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
         enemy.transform.position = spawnPoint.position;
@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
         //stateController.enabled = true;
 
         HiddenObjects hiddenScript = spawnedEnemy.GetComponent<HiddenObjects>();
-        hiddenScript.enabled = true;
+        //hiddenScript.enabled = true;
         hiddenScript.ShowHiddenObject();
         spawnedEnemy.GetComponent<StateController>().enabled = true;
     }
