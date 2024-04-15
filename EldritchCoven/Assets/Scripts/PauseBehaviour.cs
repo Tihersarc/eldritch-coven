@@ -40,7 +40,8 @@ public class PauseBehaviour : MonoBehaviour
         {
             IsPaused = true;
             Time.timeScale = 0;
-            pauseMenu.SetActive(IsPaused);
+            if(pauseMenu != null)
+                pauseMenu.SetActive(IsPaused);
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
