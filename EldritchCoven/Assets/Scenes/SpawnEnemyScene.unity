@@ -918,6 +918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BichoRedFase1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f39c3fb3f4a22764b8a43b77e9983c51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -982,7 +986,7 @@ MonoBehaviour:
   enemySpawnerPrefab: {fileID: 2735176489482458882, guid: cde85d5e00d22174fbf0930916e7f8e0, type: 3}
   spawners:
   - {fileID: 756913029}
-  spawnTime: 100
+  spawnTime: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
