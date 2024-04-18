@@ -15,16 +15,26 @@ public class HiddenObjects : MonoBehaviour
 
     private void Start()
     {
-        gameObject.layer = layerToHide;
+        HideObject();
     }
 
-    private void ShowHiddenObject()
+    public void ShowHiddenObject()
     {
         gameObject.layer = layerToShow;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.layer = layerToShow;
+        }
     }
 
-    private void HideObject()
+    public void HideObject()
     {
         gameObject.layer = layerToHide;
+
+        foreach(Transform child in transform)
+        {
+            child.gameObject.layer = layerToHide;
+        }
     }
 }

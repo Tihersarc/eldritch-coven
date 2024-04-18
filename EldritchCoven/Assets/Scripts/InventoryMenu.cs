@@ -21,7 +21,9 @@ public class InventoryMenu : MonoBehaviour
 
     private void Start()
     {
-        panelPosition.anchoredPosition = new Vector2(panelXPositionWhenClosed, 0);
+        if(panelPosition != null)
+            panelPosition.anchoredPosition = new Vector2(panelXPositionWhenClosed, 0);
+
         panelXPosition = panelXPositionWhenClosed;
     }
 
