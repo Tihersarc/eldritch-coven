@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,8 +28,15 @@ public class GlitchEffect : MonoBehaviour
     private float _flickerTime = 0.5f;
     private Material _material;
 
+    [SerializeField] AnimationCurve colorIntensityCurve;
+    [SerializeField] float colorIntensityCurveDuration;
+    float maxIntensity = 0.4f;
+    float colorIntensityCurveTimer;
+
+
     void Start()
     {
+        maxIntensity = intensity;
         _material = new Material(Shader);
     }
 
@@ -39,6 +47,7 @@ public class GlitchEffect : MonoBehaviour
             _material.SetFloat("_Intensity", intensity);
             _material.SetFloat("_ColorIntensity", colorIntensity);
             _material.SetTexture("_DispTex", displacementMap);
+            //HandleMaterialValuesIncrease();
 
             flicker += Time.deltaTime * colorIntensity;
             if (flicker > _flickerTime)
@@ -94,9 +103,66 @@ public class GlitchEffect : MonoBehaviour
         }
         else
         {
+            //HandleMaterialValuesDecrease();
             Graphics.Blit(source, destination);
         }
     }
+
+    //private void HandleMaterialValuesIncrease()
+    //{
+    //    colorIntensityCurveTimer = Mathf.Clamp(colorIntensityCurveTimer + Time.deltaTime, 0, colorIntensityCurveDuration);
+
+    //    colorIntensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration);
+    //    intensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration) * maxIntensity;
+    //    if (colorIntensity >= 1.0f)
+    //    {
+    //        colorIntensity = 1.0f;
+    //    }
+    //    _material.SetFloat("_Intensity", intensity);
+    //    _material.SetFloat("_ColorIntensity", colorIntensity);
+    //}
+
+    //private void HandleMaterialValuesDecrease()
+    //{
+    //    colorIntensityCurveTimer = Mathf.Clamp(colorIntensityCurveTimer - Time.deltaTime, 0, colorIntensityCurveDuration);
+
+    //    colorIntensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration);
+    //    intensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration) * maxIntensity;
+
+    //    if (colorIntensity <= 0)
+    //    {
+    //        colorIntensity = 0;
+    //    }
+
+    //    _material.SetFloat("_Intensity", intensity);
+    //    _material.SetFloat("_ColorIntensity", colorIntensity);
+    //}
+
+    //IEnumerator ColorIntensityChange()
+    //{
+    //    if (increasingColorIntensity)
+    //    {
+    //        colorIntensity += Time.deltaTime * 0.1f; 
+    //        if (colorIntensity >= 1.0f)
+    //        {
+    //            colorIntensity = 1.0f;
+    //            increasingColorIntensity = false; 
+    //        }
+    //    }
+    //    else
+    //    {
+    //        colorIntensity -= Time.deltaTime * 0.1f; 
+    //        if (colorIntensity <= 0)
+    //        {
+    //            colorIntensity = 0;
+    //            increasingColorIntensity = true; 
+    //        }
+    //    }
+
+    //    _material.SetFloat("_ColorIntensity", colorIntensity);
+    //    yield return null;
+
+    //}
 
     bool CheckIfMonsterPropInFrustrum()
     {
