@@ -12,16 +12,17 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Enemy[] enemies;
     [SerializeField] Transform spawnPoint;
     GameObject spawnedEnemy;
+    [HideInInspector] public GameObject instantiatedProp;
 
     private void Start()
     {
-        InstantiateHiddenEnemy();
+        //InstantiateHiddenEnemy();
         InstantiateProp();
     }
 
     private void InstantiateProp()
     {
-        Instantiate(props[(int)Random.Range(0, props.Length)], this.gameObject.transform);
+        instantiatedProp = Instantiate(props[(int)Random.Range(0, props.Length)], this.gameObject.transform);
     }
 
     public void InstantiateHiddenEnemy()
