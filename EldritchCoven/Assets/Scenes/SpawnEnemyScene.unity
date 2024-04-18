@@ -232,10 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da9ffafd2817824f8bc1bcde6146a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacementMap: {fileID: 2800000, guid: 4080d8ab781617c47ba9c48e1856699c, type: 3}
+  displacementMap: {fileID: 2800000, guid: ff4006fc4d5c00644adfc4d5014598df, type: 3}
   Shader: {fileID: 4800000, guid: 8a07d3a7db9f36142a3a28c6c936c2c3, type: 3}
-  intensity: 1
-  flipIntensity: 1
+  intensity: 0.4
+  flipIntensity: 0.3
   colorIntensity: 1
 --- !u!1 &197634320
 GameObject:
