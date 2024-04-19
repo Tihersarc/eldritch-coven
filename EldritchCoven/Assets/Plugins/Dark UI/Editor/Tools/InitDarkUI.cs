@@ -13,8 +13,6 @@ public class InitDarkUI : MonoBehaviour
 			if (!EditorPrefs.HasKey("DarkUIv2.Installed"))
 			{
 				EditorPrefs.SetInt("DarkUIv2.Installed", 1);
-				EditorUtility.DisplayDialog("Hello there!", "Thank you for purchasing Dark UI. Make sure to import 'Input System' module using the package manager." +
-					"\r\rIf you need help, feel free to contact us through our support channels or Discord. ", "Got it");
 			}
 
 			if (!EditorPrefs.HasKey("DarkUI.HasCustomEditorData"))

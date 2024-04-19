@@ -16,14 +16,14 @@ namespace Michsky.UI.Dark
         public string buttonText = "Button";
         public UnityEvent clickEvent;
         public UnityEvent hoverEvent;
-        public StudioEventEmitter hoverSound; //public AudioClip hoverSound;
-        public StudioEventEmitter clickSound; //public AudioClip clickSound;
+        public StudioEventEmitter hoverSound;
+        public StudioEventEmitter clickSound;
         public Button buttonVar;
 
         // Resources
         public TextMeshProUGUI normalText;
         public TextMeshProUGUI highlightedText;
-        public AudioSource soundSource;
+        public StudioListener soundSource;
         public GameObject rippleParent;
 
         // Settings

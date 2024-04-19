@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using FMODUnity;
 
 namespace Michsky.UI.Dark
 {
@@ -225,7 +226,7 @@ namespace Michsky.UI.Dark
 
                             if (GUILayout.Button("Create a new one", customSkin.button))
                             {
-                                bTarget.soundSource = bTarget.gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+                                bTarget.soundSource = bTarget.gameObject.AddComponent(typeof(StudioListener)) as StudioListener;
                                 currentTab = 2;
                             }
                         }

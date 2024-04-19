@@ -10,7 +10,7 @@ namespace Michsky.UI.Dark
         public StudioListener audioSource;
         
         public StudioEventEmitter hoverSound; //public AudioClip hoverSound;
-        public StudioEventEmitter clickSoundEmitter; //public AudioClip clickSound;
+        public StudioEventEmitter clickSound; //public AudioClip clickSound;
 
         // Settings
         public bool enableHoverSound = true;
@@ -25,7 +25,7 @@ namespace Michsky.UI.Dark
         public void OnPointerClick(PointerEventData eventData)
         {
             if (audioSource != null && enableClickSound == true)
-                clickSoundEmitter.Play(); //audioSource.PlayOneShot(clickSound);
+                clickSound.Play(); //audioSource.PlayOneShot(clickSound);
         }
     }
 }
