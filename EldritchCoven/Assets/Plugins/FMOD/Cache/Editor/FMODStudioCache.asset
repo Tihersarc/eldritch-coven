@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7235589128791256791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenuMusic
+  Guid:
+    Data1: -632799567
+    Data2: 1282529945
+    Data3: 1179899544
+    Data4: 1484534316
+  Banks:
+  - {fileID: 4201003984413487447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 107844
 --- !u!114 &-6927301123376457918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +54,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6085092549069049654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainLoudness
+  m_EditorClassIdentifier: 
+  Name: RainLoudness
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3976017321
+    data2: 4006493029
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5775570940855751753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +103,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5656165846450246024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Hover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Hover
+  Guid:
+    Data1: -1586813789
+    Data2: 1169517311
+    Data3: 1905864635
+    Data4: -945212340
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
   MaxDistance: 20
   Length: 0
 --- !u!114 &-5077590326661398476
@@ -93,10 +171,10 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638479390572458433
+  lastModified: 638491246237243404
   FileSizes:
   - Name: Desktop
-    Value: 1344
+    Value: 1526
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -116,45 +194,21 @@ MonoBehaviour:
   - {fileID: 4201003984413487447}
   - {fileID: 9163351906392017999}
   EditorEvents:
-  - {fileID: 7215185310336062}
   - {fileID: -5775570940855751753}
   - {fileID: 1906782345669528497}
   - {fileID: 5228396089832509442}
   - {fileID: -6927301123376457918}
+  - {fileID: 8809429885106805634}
+  - {fileID: -7235589128791256791}
+  - {fileID: 4183264660314056706}
+  - {fileID: -5656165846450246024}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5192385441609412451}
   StringsBanks:
   - {fileID: -5043793874795212488}
-  cacheTime: 638479390572618429
+  cacheTime: 638491253830368350
   cacheVersion: 131609
---- !u!114 &7215185310336062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/TestMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/TestMusic
-  Guid:
-    Data1: -632799567
-    Data2: 1282529945
-    Data3: 1179899544
-    Data4: 1484534316
-  Banks:
-  - {fileID: 4201003984413487447}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 189207
 --- !u!114 &1906782345669528497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +236,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 108560
+--- !u!114 &4183264660314056706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Click
+  Guid:
+    Data1: -1003489260
+    Data2: 1130722670
+    Data3: 806894779
+    Data4: -1057849976
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4201003984413487447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,10 +278,10 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638479390572608418
+  lastModified: 638491246254213425
   FileSizes:
   - Name: Desktop
-    Value: 4408448
+    Value: 5693440
   Exists: 1
 --- !u!114 &5192385441609412451
 MonoBehaviour:
@@ -217,7 +298,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638465602176777966
+  lastModified: 638491246237223406
   FileSizes:
   - Name: Desktop
     Value: 1374
@@ -275,6 +356,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8809429885106805634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambience/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ambience/Rain
+  Guid:
+    Data1: -540442204
+    Data2: 1300483666
+    Data3: -1297713268
+    Data4: 30525124
+  Banks:
+  - {fileID: 4201003984413487447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6085092549069049654}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 157253
 --- !u!114 &9163351906392017999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,8 +399,8 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638479390572618429
+  lastModified: 638491253830368350
   FileSizes:
   - Name: Desktop
-    Value: 144800
+    Value: 150080
   Exists: 1
