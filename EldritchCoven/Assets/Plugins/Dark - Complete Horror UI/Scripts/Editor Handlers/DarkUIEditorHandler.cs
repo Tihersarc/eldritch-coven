@@ -11,7 +11,15 @@ namespace Michsky.UI.Dark
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
 
             EditorGUILayout.LabelField(new GUIContent(content), skin.FindStyle("Text"), GUILayout.Width(120));
-            EditorGUILayout.PropertyField(property, new GUIContent(""));
+            //EditorGUILayout.PropertyField(property, new GUIContent(""));
+            if (property != null)
+            {
+                EditorGUILayout.PropertyField(property, new GUIContent(""));
+            }
+            else
+            {
+                Debug.LogWarning("Property is null.");
+            }
 
             GUILayout.EndHorizontal();
         }

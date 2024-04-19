@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 namespace Michsky.UI.Dark
 {
@@ -15,8 +16,8 @@ namespace Michsky.UI.Dark
         public string buttonText = "Button";
         public UnityEvent clickEvent;
         public UnityEvent hoverEvent;
-        public AudioClip hoverSound;
-        public AudioClip clickSound;
+        public StudioEventEmitter hoverSound; //public AudioClip hoverSound;
+        public StudioEventEmitter clickSound; //public AudioClip clickSound;
         public Button buttonVar;
 
         // Resources
@@ -64,7 +65,7 @@ namespace Michsky.UI.Dark
             buttonVar.onClick.AddListener(delegate { clickEvent.Invoke(); });
 
             if (enableButtonSounds == true && useClickSound == true && soundSource != null)
-                buttonVar.onClick.AddListener(delegate { soundSource.PlayOneShot(clickSound); });
+                buttonVar.onClick.AddListener(delegate { clickSound.Play(); });
 
             if (useRipple == true && rippleParent != null)
                 rippleParent.SetActive(false);
@@ -131,7 +132,7 @@ namespace Michsky.UI.Dark
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (enableButtonSounds == true && useHoverSound == true && buttonVar.interactable == true && soundSource != null)
-                soundSource.PlayOneShot(hoverSound);
+                hoverSound.Play();
 
             hoverEvent.Invoke();
             isPointerOn = true;

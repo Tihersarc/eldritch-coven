@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Michsky.UI.Dark
@@ -6,9 +7,10 @@ namespace Michsky.UI.Dark
     public class UIElementSound : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
     {
         // Resources
-        public AudioSource audioSource;
-        public AudioClip hoverSound;
-        public AudioClip clickSound;
+        public StudioListener audioSource;
+        
+        public StudioEventEmitter hoverSound; //public AudioClip hoverSound;
+        public StudioEventEmitter clickSoundEmitter; //public AudioClip clickSound;
 
         // Settings
         public bool enableHoverSound = true;
@@ -17,13 +19,13 @@ namespace Michsky.UI.Dark
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (audioSource != null && enableHoverSound == true)
-                audioSource.PlayOneShot(hoverSound);
+                hoverSound.Play(); //audioSource.PlayOneShot(hoverSound);
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             if (audioSource != null && enableClickSound == true)
-                audioSource.PlayOneShot(clickSound);
+                clickSoundEmitter.Play(); //audioSource.PlayOneShot(clickSound);
         }
     }
 }
