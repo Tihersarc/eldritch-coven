@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8924987429742582530}
   - component: {fileID: 2470170089889747430}
   - component: {fileID: 8430251632849058001}
+  - component: {fileID: 4750392451077258719}
   m_Layer: 0
   m_Name: Input Rebinder Binding
   m_TagString: Untagged
@@ -31,7 +32,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9068598917158448176}
   - {fileID: 3579211090927900292}
@@ -96,22 +97,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OriginalBinding:
-    m_Name: 
-    m_Id: 
-    m_Path: 
+    m_Name: up
+    m_Id: e2062cb9-1b15-46a2-838c-2f8d72a0bdd9
+    m_Path: <Keyboard>/w
     m_Interactions: 
     m_Processors: 
-    m_Groups: 
-    m_Action: 
-    m_Flags: 0
-  Asset: {fileID: 0}
+    m_Groups: ;Keyboard&Mouse
+    m_Action: Move
+    m_Flags: 8
+  Asset: {fileID: -944628639613478452, guid: 28b5a211b89c91c40b03127030c1ee7c, type: 3}
   CurrentBindingText: {fileID: 2087291157409836274}
   ButtonText: {fileID: 4117516087186688112}
   rebindButton: {fileID: 378974685260514394}
   resetButton: {fileID: 5399040687910827296}
-  BindingIndex: 0
-  MapName: 
-  ActionName: 
+  BindingIndex: 2
+  MapName: Player
+  ActionName: Move
 --- !u!222 &2470170089889747430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -150,6 +151,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4750392451077258719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248731325264808493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &545119062806522090
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,8 +199,8 @@ RectTransform:
   m_GameObject: {fileID: 545119062806522090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1975472219590218574}
   m_Father: {fileID: 5690491116334022439}
@@ -754,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 89.47, y: 0}
+  m_AnchoredPosition: {x: 81.255, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2071728070186728406
@@ -785,7 +806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Current Binding
+  m_text: W [Keyboard]
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
   m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
