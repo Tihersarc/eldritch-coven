@@ -4,16 +4,28 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using TMPro;
+using FMOD.Studio;
+using FMODUnity;
 
 namespace Michsky.UI.Dark
 {
     public class QualityManager : MonoBehaviour
     {
         // Audio
-        public AudioMixer mixer;
-        public SliderManager masterSlider;
-        public SliderManager musicSlider;
-        public SliderManager sfxSlider;
+        //public AudioMixer mixer;
+        //public SliderManager masterSlider;
+        //public SliderManager musicSlider;
+        //public SliderManager sfxSlider;
+
+        StudioListener mixer;
+        const string VCAPath = "vca:/";
+        const string generalVCAPath = "General";
+        const string musicVCAPath = "Music";
+        const string SFXVCAPath = "SFX";
+
+        VCA generalVCA;
+        VCA sfxVCA;
+        VCA musicVCA;
 
         // Resolution
         public TMP_Dropdown defaultDropdown;
@@ -29,11 +41,19 @@ namespace Michsky.UI.Dark
 
         void Start()
         {
+            generalVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + generalVCAPath);
+            sfxVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + SFXVCAPath);
+            musicVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + musicVCAPath);
+
             if (mixer != null)
             {
-                mixer.SetFloat("Master", Mathf.Log10(PlayerPrefs.GetFloat(masterSlider.sliderTag + "DarkSliderValue")) * 20);
-                mixer.SetFloat("Music", Mathf.Log10(PlayerPrefs.GetFloat(musicSlider.sliderTag + "DarkSliderValue")) * 20);
-                mixer.SetFloat("SFX", Mathf.Log10(PlayerPrefs.GetFloat(sfxSlider.sliderTag + "DarkSliderValue")) * 20);
+                //mixer.SetFloat("Master", Mathf.Log10(PlayerPrefs.GetFloat(masterSlider.sliderTag + "DarkSliderValue")) * 20);
+                //mixer.SetFloat("Music", Mathf.Log10(PlayerPrefs.GetFloat(musicSlider.sliderTag + "DarkSliderValue")) * 20);
+                //mixer.SetFloat("SFX", Mathf.Log10(PlayerPrefs.GetFloat(sfxSlider.sliderTag + "DarkSliderValue")) * 20);
+
+                generalVCA.setVolume(PlayerPrefs.GetFloat("Master Volume" + "DarkSliderValue"));
+                sfxVCA.setVolume(PlayerPrefs.GetFloat("SFX Volume" + "DarkSliderValue"));
+                musicVCA.setVolume(PlayerPrefs.GetFloat("Music Volume" + "DarkSliderValue"));
             }
 
             if (isMobile == false)
@@ -192,9 +212,9 @@ namespace Michsky.UI.Dark
             else if (index == 1) { QualitySettings.realtimeReflectionProbes = true; }
         }
 
-        public void VolumeSetMaster(float volume) { mixer.SetFloat("Master", Mathf.Log10(volume) * 20); }
-        public void VolumeSetMusic(float volume) { mixer.SetFloat("Music", Mathf.Log10(volume) * 20); }
-        public void VolumeSetSFX(float volume) { mixer.SetFloat("SFX", Mathf.Log10(volume) * 20); }
+        public void VolumeSetMaster(float volume) { generalVCA.setVolume(volume); }
+        public void VolumeSetMusic(float volume) { musicVCA.setVolume(volume); }
+        public void VolumeSetSFX(float volume) { sfxVCA.setVolume(volume); }
 
         public void SetOverallQuality(int qualityIndex)
         {
