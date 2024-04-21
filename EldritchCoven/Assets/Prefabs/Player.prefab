@@ -4127,7 +4127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 2
-  rotLimit: 45
+  rotLimit: 80
 --- !u!114 &3458464929939674132
 MonoBehaviour:
   m_ObjectHideFlags: 0
