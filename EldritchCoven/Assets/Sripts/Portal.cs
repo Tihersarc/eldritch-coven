@@ -32,7 +32,6 @@ public class Portal : MonoBehaviour
 
     public delegate void OnTravelPortalDelegate();
     public static event OnTravelPortalDelegate OnTravelPortal;
-    public static event OnTravelPortalDelegate OnPostTravelPortal;
 
     void Awake()
     {
@@ -93,7 +92,6 @@ public class Portal : MonoBehaviour
             if (portalSide != previousPortalSide && portalSide != 0)
             {
                 traveller.Teleport(m.GetColumn(3), m.rotation);
-                //Render();
                 OnTravelPortal?.Invoke();
 
                 // No puedes usar OnTriggerEnter/Exit ya que depende del FixedUpdate y aqui se usa el LastUpdate
