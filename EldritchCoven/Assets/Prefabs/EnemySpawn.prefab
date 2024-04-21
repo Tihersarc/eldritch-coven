@@ -97,9 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1eb10b4e07e03a40bf0dc6e837759ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propsMeshes: []
-  enemies: []
+  spawnManager: {fileID: 0}
+  props:
+  - {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
+  enemies:
+  - {fileID: 2040604319182501948, guid: e0a0da91a9f6f08468cba99dc37bf087, type: 3}
   spawnPoint: {fileID: 1242487353688918511}
+  instantiatedProp: {fileID: 0}
 --- !u!1 &3753814807115969912
 GameObject:
   m_ObjectHideFlags: 0
