@@ -97,11 +97,17 @@ public class PlayerController : MonoBehaviour
         {
             RaycastHit hit;
             Button button;
+            Door door;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
             {
                 if (hit.transform.TryGetComponent<Button>(out button))
                 {
                     button.Interact();
+                }
+
+                if (hit.transform.TryGetComponent<Door>(out door))
+                {
+                    door.Interact();
                 }
             }
             
