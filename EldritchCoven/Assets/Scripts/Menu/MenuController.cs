@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuBeta");
     }
 
     public void Quit()
