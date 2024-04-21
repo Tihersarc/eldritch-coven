@@ -8,6 +8,8 @@ namespace Michsky.UI.Dark
 {
     public class MainPanelManager : MonoBehaviour
     {
+        public bool isOnEnable = true;
+
         // List
         public List<PanelItem> panels = new List<PanelItem>();
 
@@ -56,30 +58,33 @@ namespace Michsky.UI.Dark
 
         void OnEnable()
         {
-            if (panels[currentPanelIndex].panelButton != null)
+            if (isOnEnable)
             {
-                currentButton = panels[currentPanelIndex].panelButton;
-                currentButtonAnimator = currentButton.GetComponent<Animator>();
-                currentButtonAnimator.Play(buttonFadeIn);
+                if (panels[currentPanelIndex].panelButton != null)
+                {
+                    currentButton = panels[currentPanelIndex].panelButton;
+                    currentButtonAnimator = currentButton.GetComponent<Animator>();
+                    currentButtonAnimator.Play(buttonFadeIn);
+                }
+
+                currentPanel = panels[currentPanelIndex].panelObject;
+                currentPanel.SetActive(true);
+                currentPanelAnimator = currentPanel.GetComponent<Animator>();
+
+                if (instantInOnEnable == true && currentPanelAnimator.gameObject.activeInHierarchy == true)
+                    currentPanelAnimator.Play(panelInstantIn);
+                else if (instantInOnEnable == false && currentPanelAnimator.gameObject.activeInHierarchy == true)
+                    currentPanelAnimator.Play(panelFadeIn);
+
+                firstTime = false;
+
+                for (int i = 0; i < panels.Count; i++)
+                {
+                    if (panels[i].panelObject == null) { continue; }
+                    if (i != currentPanelIndex) { panels[i].panelObject.SetActive(false); }
+                }
             }
-
-            currentPanel = panels[currentPanelIndex].panelObject;
-            currentPanel.SetActive(true);
-            currentPanelAnimator = currentPanel.GetComponent<Animator>();
-
-            if (instantInOnEnable == true && currentPanelAnimator.gameObject.activeInHierarchy == true)
-                currentPanelAnimator.Play(panelInstantIn);
-            else if (instantInOnEnable == false && currentPanelAnimator.gameObject.activeInHierarchy == true)
-                currentPanelAnimator.Play(panelFadeIn);
-
-            firstTime = false;
-
-            for (int i = 0; i < panels.Count; i++)
-            {
-                if (panels[i].panelObject == null) { continue; }
-                if (i != currentPanelIndex) { panels[i].panelObject.SetActive(false); }
-            }
-        }
+                    }
 
         public void EnableFirstPanel()
         {
