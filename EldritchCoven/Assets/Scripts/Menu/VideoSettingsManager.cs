@@ -21,26 +21,29 @@ public class VideoSettingsManager : MonoBehaviour
         resolutionList = Screen.resolutions;
         uniqueResolutionList = new();
 
-        resolutionDropdown.ClearOptions();
-
-        for (int i = 0; i < resolutionList.Length; i++)
+        if (resolutionDropdown != null )
         {
-            Vector2 resolution = new Vector2(resolutionList[i].width, resolutionList[i].height);
-            if (!uniqueResolutionList.Contains(resolution))
+            resolutionDropdown.ClearOptions();
+
+            for (int i = 0; i < resolutionList.Length; i++)
             {
-                uniqueResolutionList.Add(resolution);
-                dropdownOptions.Add(resolutionList[i].width + "x" + resolutionList[i].height);
+                Vector2 resolution = new Vector2(resolutionList[i].width, resolutionList[i].height);
+                if (!uniqueResolutionList.Contains(resolution))
+                {
+                    uniqueResolutionList.Add(resolution);
+                    dropdownOptions.Add(resolutionList[i].width + "x" + resolutionList[i].height);
+                }
+
+                if (resolutionList[i].width == Screen.currentResolution.width && resolutionList[i].height == Screen.currentResolution.height)
+                {
+                    resolutionIndex = i;
+                }
             }
 
-            if (resolutionList[i].width == Screen.currentResolution.width && resolutionList[i].height == Screen.currentResolution.height)
-            {
-                resolutionIndex = i;
-            }
-        }
-
-        resolutionDropdown.AddOptions(dropdownOptions);
-        resolutionDropdown.value = resolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+            resolutionDropdown.AddOptions(dropdownOptions);
+            resolutionDropdown.value = resolutionIndex;
+            resolutionDropdown.RefreshShownValue();
+        }        
     }
 
     public void SetResolution(int resIndex)
