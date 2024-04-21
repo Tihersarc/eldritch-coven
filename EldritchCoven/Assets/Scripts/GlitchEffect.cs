@@ -175,7 +175,7 @@ public class GlitchEffect : MonoBehaviour
 
         foreach (EnemySpawner spawner in spawners)
         {
-            Bounds propBounds = spawner.instantiatedProp.GetComponent<MeshRenderer>().bounds;
+            Bounds propBounds = spawner.instantiatedProp.GetComponentInChildren<MeshRenderer>().bounds;
             propBounds.size *= 0.5f;
 
             if (GeometryUtility.TestPlanesAABB(cameraFrustum, propBounds))

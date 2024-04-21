@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        Debug.Log("hola");
         SceneManager.LoadScene(sceneIndex);
     }
 
