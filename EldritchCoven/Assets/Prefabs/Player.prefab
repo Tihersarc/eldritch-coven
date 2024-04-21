@@ -621,6 +621,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8537838874010648011}
   - component: {fileID: 1998923048601288617}
+  - component: {fileID: 3143731382535939344}
+  - component: {fileID: 4376119403656264989}
   - component: {fileID: 3261938521524615877}
   m_Layer: 0
   m_Name: Main Camera
@@ -698,6 +700,31 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3143731382535939344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425489838773444172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd243cde624caa45867f660fbb7d908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4376119403656264989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425489838773444172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a8c6bd63cf31341a19e2f589b1264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderPlane: {fileID: 9219246608532508875}
 --- !u!114 &3261938521524615877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3703,6 +3730,7 @@ GameObject:
   - component: {fileID: 3458464929939674132}
   - component: {fileID: 4064048661209462116}
   - component: {fileID: 3376226939357797352}
+  - component: {fileID: 9176190032159228785}
   - component: {fileID: 376344190982550242}
   m_Layer: 8
   m_Name: Player
@@ -3970,6 +3998,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHandAnim: {fileID: 2615307276960453311}
+--- !u!114 &9176190032159228785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219246608532508875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c1eeb8cdc99594b8279734d55e3ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &376344190982550242
 MonoBehaviour:
   m_ObjectHideFlags: 0

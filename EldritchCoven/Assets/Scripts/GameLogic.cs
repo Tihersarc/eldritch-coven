@@ -31,6 +31,11 @@ public class GameLogic : MonoBehaviour
     }
 
     public PlayerController playerController;
+    public Camera[] cameras;
+    public MeshRenderer[] renderPlanes;
+    public Portal[] portals;
+    public PortalCamera[] portalCameras;
+    public PortalTextureSetup portalTextureSetup;
 
     private void Awake()
     {
@@ -38,5 +43,10 @@ public class GameLogic : MonoBehaviour
         {
             FindObjectOfType<PlayerController>();
         }
+
+        cameras = FindObjectsOfType<Camera>();
+        portals = FindObjectsOfType<Portal>();
+        portalCameras = FindObjectsOfType<PortalCamera>();
+        portalTextureSetup = FindObjectOfType<PortalTextureSetup>();
     }
 }
