@@ -7,6 +7,32 @@ using UnityEditor;
 #endif
 public class PortalTextureSetup : MonoBehaviour
 {
+    private static PortalTextureSetup portalTextureSetup;
+
+    public static PortalTextureSetup instance
+    {
+        get
+        {
+            return RequestInstance();
+        }
+    }
+
+    static PortalTextureSetup RequestInstance()
+    {
+
+        if (portalTextureSetup == null)
+        {
+            portalTextureSetup = FindObjectOfType<PortalTextureSetup>();
+
+            if (portalTextureSetup == null)
+            {
+                GameObject gamelogicObject = new GameObject("PortalTextureSetup");
+                portalTextureSetup = gamelogicObject.AddComponent<PortalTextureSetup>();
+            }
+        }
+        return portalTextureSetup;
+    }
+
     [SerializeField] private GameObject[] portals;
 
     private void Awake()
@@ -38,5 +64,4 @@ public class PortalTextureSetup : MonoBehaviour
         portals = auxPortals;
 #endif
     }
-
 }
