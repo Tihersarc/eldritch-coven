@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3628173250442314336}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -39.6, y: -42.4, z: -20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -117,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 25.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -288,8 +288,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.03
-      minScalar: 0.03
+      scalar: 0.24
+      minScalar: 0.24
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -341,8 +341,8 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.8
+      scalar: 0.8
+      minScalar: 6.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -394,8 +394,8 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 1
+      scalar: 8
+      minScalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -605,7 +605,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 10000
+    maxNumParticles: 50000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
     rotation3D: 0
@@ -673,7 +673,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 30, y: 1, z: 30}
+    m_Scale: {x: 40, y: 1, z: 40}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -871,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2000
+      scalar: 50000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1327,7 +1327,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 13878
-        atime2: 46453
+        atime2: 53199
         atime3: 65535
         atime4: 0
         atime5: 0
@@ -4838,6 +4838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645988449478787925}
+  - component: {fileID: 7263800016732539898}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Untagged
@@ -4861,6 +4862,39 @@ Transform:
   - {fileID: 118101784919300603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7263800016732539898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538055765717527238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -540442204
+      Data2: 1300483666
+      Data3: -1297713268
+      Data4: 30525124
+    Path: event:/Music/Ambience/Rain
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: RainLoudness
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7204188715636779999
 GameObject:
   m_ObjectHideFlags: 0
