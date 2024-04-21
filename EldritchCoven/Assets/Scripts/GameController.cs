@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour
 
     public void ShowLoseCanvas()
     {
-        Debug.Log("hola");
         loseCanvas.SetActive(true);
+        Debug.Log("UwU");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
