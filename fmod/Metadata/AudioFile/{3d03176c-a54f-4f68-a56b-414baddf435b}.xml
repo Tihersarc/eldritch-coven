@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{3d03176c-a54f-4f68-a56b-414baddf435b}">
 		<property name="assetPath">
-			<value>Music/Ambience/Ambience_Grotesqueries.wav</value>
+			<value>Music/Ambience/New Folder/Ambience_Grotesqueries.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

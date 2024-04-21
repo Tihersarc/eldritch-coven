@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{bdbf621d-575a-4bfc-bff8-1d316a9f2a5a}">
 		<property name="assetPath">
-			<value>Hover.mp3</value>
+			<value>SFX/UI/Hover.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

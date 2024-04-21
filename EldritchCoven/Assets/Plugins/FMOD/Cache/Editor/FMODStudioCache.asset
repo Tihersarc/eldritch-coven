@@ -171,7 +171,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638493248636445949
+  lastModified: 638493246351287486
   FileSizes:
   - Name: Desktop
     Value: 1568
@@ -202,13 +202,13 @@ MonoBehaviour:
   - {fileID: -7235589128791256791}
   - {fileID: 4183264660314056706}
   - {fileID: -5656165846450246024}
-  - {fileID: 4818785439582422999}
+  - {fileID: 9018129481187741375}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5192385441609412451}
   StringsBanks:
   - {fileID: -5043793874795212488}
-  cacheTime: 638493248636741820
+  cacheTime: 638493246354523629
   cacheVersion: 131609
 --- !u!114 &1906782345669528497
 MonoBehaviour:
@@ -279,38 +279,11 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638493248636731825
+  lastModified: 638493246352563187
   FileSizes:
   - Name: Desktop
     Value: 5693440
   Exists: 1
---- !u!114 &4818785439582422999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/DoorOpening
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/DoorOpening
-  Guid:
-    Data1: 1133195078
-    Data2: 1157748497
-    Data3: -803334741
-    Data4: -1212207108
-  Banks:
-  - {fileID: 9163351906392017999}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5192385441609412451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +299,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638493186945722574
+  lastModified: 638493246351267482
   FileSizes:
   - Name: Desktop
     Value: 1374
@@ -412,6 +385,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 157253
+--- !u!114 &9018129481187741375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DoorOpening
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorOpening
+  Guid:
+    Data1: 1133195078
+    Data2: 1157748497
+    Data3: -803334741
+    Data4: -1212207108
+  Banks:
+  - {fileID: 9163351906392017999}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &9163351906392017999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   Path: ../fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638493248636741820
+  lastModified: 638493246354523629
   FileSizes:
   - Name: Desktop
     Value: 202944
