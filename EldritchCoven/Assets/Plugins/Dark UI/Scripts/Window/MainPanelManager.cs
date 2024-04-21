@@ -90,10 +90,10 @@ namespace Michsky.UI.Dark
         {
             try
             {
-                panels[currentPanelIndex].panelObject.GetComponent<Animator>().Play("Instant In");
-                panels[currentPanelIndex].panelButton.GetComponent<Animator>().Play("Instant In");
-                Canvas.ForceUpdateCanvases();
-                LayoutRebuilder.ForceRebuildLayoutImmediate(panels[currentPanelIndex].panelObject.GetComponent<RectTransform>());
+                //panels[currentPanelIndex].panelObject.GetComponent<Animator>().Play("Instant In");
+                //panels[currentPanelIndex].panelButton.GetComponent<Animator>().Play("Instant In");
+                //Canvas.ForceUpdateCanvases();
+                //LayoutRebuilder.ForceRebuildLayoutImmediate(panels[currentPanelIndex].panelObject.GetComponent<RectTransform>());
             }
 
             catch { }
