@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{3f40f9fe-7b6d-40c7-89e6-a4864bb7d993}">
 		<property name="assetPath">
-			<value>Music/Ambience/Ambience_EerieSound.wav</value>
+			<value>Music/Ambience/New Folder/Ambience_EerieSound.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
