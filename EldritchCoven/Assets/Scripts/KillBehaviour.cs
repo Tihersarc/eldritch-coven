@@ -14,7 +14,6 @@ public class KillBehaviour : MonoBehaviour
         {
             PauseBehaviour.Instance.IsPaused = true;
             Time.timeScale = 0f;
-            Debug.Log("UwU");
             onKill.Invoke();
         }
     }

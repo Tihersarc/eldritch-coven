@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: ChaseState
   m_EditorClassIdentifier: 
   isDone: 0
-  possibleTransitions:
-  - decisionToBeMade: {fileID: 11400000, guid: 8c39143f2b660cf43b77405498ff3548, type: 2}
-    onDecisionTrueExitState: {fileID: 0}
-    onDecisionFalseExitState: {fileID: 11400000, guid: f588a7bd2e36cd64cbd926e60b88bc6d, type: 2}
+  possibleTransitions: []
