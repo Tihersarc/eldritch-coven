@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject[] props;
     [SerializeField] Enemy[] enemies;
     [SerializeField] Transform spawnPoint;
+    GameObject collider;
     GameObject spawnedEnemy;
     [HideInInspector] public GameObject instantiatedProp;
 
@@ -29,6 +30,9 @@ public class EnemySpawner : MonoBehaviour
     {
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
+        collider = enemy.GetComponentInChildren<Collider>().gameObject;
+        collider.SetActive(false);
+        Debug.Log("UwU");
         enemy.transform.position = spawnPoint.position;
         enemy.transform.rotation = enemyRotation;
         spawnedEnemy = enemy;
@@ -38,6 +42,7 @@ public class EnemySpawner : MonoBehaviour
     public void Spawn()
     {
         HiddenObjects hiddenScript = spawnedEnemy.GetComponentInChildren<HiddenObjects>();
+        collider.SetActive(true);
         hiddenScript.ShowHiddenObject();
         spawnedEnemy.GetComponent<StateController>().enabled = true;
     }
