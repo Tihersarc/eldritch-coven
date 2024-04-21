@@ -4838,7 +4838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645988449478787925}
-  - component: {fileID: 7263800016732539898}
+  - component: {fileID: 5942634165057171139}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Untagged
@@ -4862,7 +4862,7 @@ Transform:
   - {fileID: 118101784919300603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7263800016732539898
+--- !u!114 &5942634165057171139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
