@@ -83,3 +83,4 @@ fmod/[Aa]ssets/StreamingAssets/**/*.bank.meta
 # Log files can be ignored.
 fmod/fmod_editor.log
 EldritchCoven/fmod_editor.log
+EldritchCoven/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
