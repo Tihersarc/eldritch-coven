@@ -49,7 +49,7 @@ public class PortalTextureSetup : MonoBehaviour
             Portal portalBehaviour = portal.GetComponent<Portal>();
 
             //Creamos una rendertexture con el tamaño adecuado de la camara/pantalla
-            portalCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 0);
+            portalCamera.targetTexture = new RenderTexture(1920, 1080, 0);
             portalBehaviour.exit.screen.material.mainTexture = portalCamera.targetTexture;
         }
     }
