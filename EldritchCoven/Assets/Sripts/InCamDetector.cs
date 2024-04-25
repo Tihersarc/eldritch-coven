@@ -13,7 +13,6 @@ public class InCamDetector : MonoBehaviour
     private void Awake()
     {
         cam = this.gameObject.GetComponent<Camera>();
-        Portal.OnTravelPortal += CheckFrustrumVisibility;
     }
 
     private void OnPreCull()

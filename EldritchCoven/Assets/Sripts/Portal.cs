@@ -30,9 +30,6 @@ public class Portal : MonoBehaviour
     //Lista de objetos que estaninteractuando con el portal a la vez
     private List<TravelPortal> travellers = new List<TravelPortal>();
 
-    public delegate void OnTravelPortalDelegate();
-    public static event OnTravelPortalDelegate OnTravelPortal;
-
     void Awake()
     {
         referenceCam = Camera.main;
