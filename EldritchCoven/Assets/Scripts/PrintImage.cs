@@ -8,7 +8,7 @@ public class PrintImage : MonoBehaviour
 
     private void Start()
     {
-        texture = new Texture2D(256, 256, TextureFormat.RGB24, false);
+        texture = new Texture2D(1920, 1080, TextureFormat.RGB24, false);
     }
 
     public void ConvertToImage(RenderTexture rTexture)
