@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wood
   - Dirt
+  - GlitchedProp
   layers:
   - Default
   - TransparentFX

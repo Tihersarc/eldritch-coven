@@ -33,6 +33,8 @@ public class GlitchEffect : MonoBehaviour
     float maxIntensity = 0.4f;
     float colorIntensityCurveTimer;
 
+    [SerializeField] float raycastDistance = 4.0f;
+
 
     void Start()
     {
@@ -180,8 +182,15 @@ public class GlitchEffect : MonoBehaviour
 
             if (GeometryUtility.TestPlanesAABB(cameraFrustum, propBounds))
             {
-                enemyPropInCam = true;
-                break;
+                RaycastHit hit;
+                if(Physics.Raycast(transform.position, spawner.instantiatedProp.transform.position - transform.position, out hit, raycastDistance))
+                {
+                    if(hit.transform.gameObject.tag == "GlitchedProp")
+                    {
+                        enemyPropInCam = true;
+                        break;
+                    }
+                }
             }
         }
 

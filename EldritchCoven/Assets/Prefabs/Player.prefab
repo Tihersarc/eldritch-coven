@@ -5052,6 +5052,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   colorIntensityCurveDuration: 2
+  raycastDistance: 6
 --- !u!111 &3574783393435720362 stripped
 Animation:
   m_CorrespondingSourceObject: {fileID: 5154149898742937106, guid: 8a759c41cd49de84b89bdfe44a4f86f7, type: 3}

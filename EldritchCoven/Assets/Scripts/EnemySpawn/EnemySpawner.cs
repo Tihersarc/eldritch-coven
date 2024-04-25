@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
     private void InstantiateProp()
     {
         instantiatedProp = Instantiate(props[(int)Random.Range(0, props.Length)], this.gameObject.transform);
+        instantiatedProp.gameObject.tag = "GlitchedProp";
     }
 
     public void InstantiateHiddenEnemy()
@@ -32,7 +33,6 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
         collider = enemy.GetComponentInChildren<Collider>().gameObject;
         collider.SetActive(false);
-        Debug.Log("UwU");
         enemy.transform.position = spawnPoint.position;
         enemy.transform.rotation = enemyRotation;
         spawnedEnemy = enemy;
