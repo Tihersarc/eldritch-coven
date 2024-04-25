@@ -8,6 +8,7 @@ public class InCamDetector : MonoBehaviour
     [SerializeField] GameObject renderPlane;
     Plane[] cameraFrustum;
     Camera cam;
+    [SerializeField] int portalPlaneLayer;
 
     private void Awake()
     {
@@ -17,7 +18,7 @@ public class InCamDetector : MonoBehaviour
 
     private void OnPreCull()
     {
-        renderPlane.layer = 6;
+        renderPlane.layer = portalPlaneLayer;
     }
 
     private void OnPostRender()

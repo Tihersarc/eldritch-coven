@@ -5,11 +5,7 @@ using UnityEngine;
 public class RenderPlaneRayCaster : MonoBehaviour
 {
     [SerializeField] Transform[] cornerPoints;
-    
-    void Start()
-    {
-        
-    }
+    [SerializeField] LayerMask portalLayer;
 
     public bool CheckVisibility(Camera camera, GameObject observer)
     {
@@ -24,7 +20,7 @@ public class RenderPlaneRayCaster : MonoBehaviour
 
             RaycastHit hit;
 
-            if (Physics.Raycast(cornerPoints[i].position, direction, out hit, 1000f, 7))
+            if (Physics.Raycast(cornerPoints[i].position, direction, out hit, 1000f, portalLayer))
             {
                 Debug.DrawRay(cornerPoints[i].position, direction.normalized * hit.distance, Color.red);
 

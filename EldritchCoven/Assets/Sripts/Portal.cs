@@ -72,8 +72,9 @@ public class Portal : MonoBehaviour
     public void Render()
     {
         //ProtectScreenFromClipping(referenceCam.transform.position);
-        OnTravelPortal?.Invoke();
+        //OnTravelPortal?.Invoke();
         //ChangeNearClipPlane();
+        Camera.main.Render();
     }
 
     //Comprueva si el objeto ha atravesado el portal
@@ -92,7 +93,7 @@ public class Portal : MonoBehaviour
             if (portalSide != previousPortalSide && portalSide != 0)
             {
                 traveller.Teleport(m.GetColumn(3), m.rotation);
-                OnTravelPortal?.Invoke();
+                //OnTravelPortal?.Invoke();
 
                 // No puedes usar OnTriggerEnter/Exit ya que depende del FixedUpdate y aqui se usa el LastUpdate
                 exit.NewTraveller(traveller);

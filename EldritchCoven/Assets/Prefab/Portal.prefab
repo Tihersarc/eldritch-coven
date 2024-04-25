@@ -232,6 +232,9 @@ MonoBehaviour:
   - {fileID: 7142738456755177369}
   - {fileID: 2182053028175038100}
   - {fileID: 7331929608190021657}
+  portalLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!1 &4590582543911640290
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +432,7 @@ GameObject:
   - component: {fileID: 3955453132098171604}
   - component: {fileID: 2255860350522187095}
   - component: {fileID: 8433218734685126629}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,3 +637,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderPlane: {fileID: 3479053315368397109}
+  portalPlaneLayer: 13
