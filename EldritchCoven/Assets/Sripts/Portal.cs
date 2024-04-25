@@ -38,7 +38,6 @@ public class Portal : MonoBehaviour
         referenceCam = Camera.main;
         portalCam = GetComponentInChildren<Camera>();
         Camera.onPreCull += OnPrecullPortal;
-        MainCamera.renderPortals += Render;
     }
 
     #region Updates
@@ -69,14 +68,6 @@ public class Portal : MonoBehaviour
         Camera.onPreCull -= OnPrecullPortal;
     }
 
-    public void Render()
-    {
-        //ProtectScreenFromClipping(referenceCam.transform.position);
-        //OnTravelPortal?.Invoke();
-        //ChangeNearClipPlane();
-        Camera.main.Render();
-    }
-
     //Comprueva si el objeto ha atravesado el portal
     private void ProcessTravellers()
     {
@@ -93,7 +84,6 @@ public class Portal : MonoBehaviour
             if (portalSide != previousPortalSide && portalSide != 0)
             {
                 traveller.Teleport(m.GetColumn(3), m.rotation);
-                //OnTravelPortal?.Invoke();
 
                 // No puedes usar OnTriggerEnter/Exit ya que depende del FixedUpdate y aqui se usa el LastUpdate
                 exit.NewTraveller(traveller);
@@ -105,6 +95,8 @@ public class Portal : MonoBehaviour
                 traveller.lastPositionRespectPortal = distanceFromPortal;
             }
         }
+
+        Camera.main.Render();
     }
 
     // Evita que se vea la parte de atras del portal porque la camara atraviesa el portal

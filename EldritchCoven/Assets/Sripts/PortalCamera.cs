@@ -12,12 +12,7 @@ public class PortalCamera : MonoBehaviour
     {
         portal = this.transform.parent;
         transform.forward = portal.forward;
-        Portal.OnTravelPortal += MoveCamera;
-    }
-
-    private void Update()
-    {
-        MoveCamera();
+        MainCamera.renderPortals += MoveCamera;
     }
 
     public void MoveCamera()
@@ -25,5 +20,10 @@ public class PortalCamera : MonoBehaviour
         referenceCamera = portal.GetComponent<Portal>().ReferenceCam;
         var m = portal.transform.localToWorldMatrix * otherPortal.worldToLocalMatrix * referenceCamera.transform.localToWorldMatrix;
         transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
+    }
+
+    private void OnDestroy()
+    {
+        MainCamera.renderPortals -= MoveCamera;
     }
 }
