@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 //[ExecuteInEditMode]
 [AddComponentMenu("Image Effects/GlitchEffect")]
@@ -166,34 +167,56 @@ public class GlitchEffect : MonoBehaviour
 
     //}
 
+    Vector3 pos = Vector3.zero;
+
     bool CheckIfMonsterPropInFrustrum()
     {
         bool enemyPropInCam = false;
 
-        Camera cam = this.GetComponent<Camera>();
-        Plane[] cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
+        //Camera cam = this.GetComponent<Camera>();
+        //Plane[] cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
 
-        List<EnemySpawner> spawners = EnemySpawnManager.instance.spawners;
+        //List<EnemySpawner> spawners = EnemySpawnManager.instance.spawners;
 
-        foreach (EnemySpawner spawner in spawners)
+        //foreach (EnemySpawner spawner in spawners)
+        //{
+        //    Bounds propBounds = spawner.instantiatedProp.GetComponentInChildren<MeshRenderer>().bounds;
+        //    propBounds.size *= 0.5f;
+
+        //    if (GeometryUtility.TestPlanesAABB(cameraFrustum, propBounds))
+        //    {
+        //        RaycastHit hit;
+        //        if(Physics.Raycast(transform.position, spawner.instantiatedProp.transform.position - transform.position, out hit, raycastDistance))
+        //        {
+        //            if(hit.transform.gameObject.tag == "GlitchedProp")
+        //            {
+        //                enemyPropInCam = true;
+        //                break;
+        //            }
+        //        }
+        //    }
+        //}
+
+        RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(.1f, .1f, 1f), this.transform.forward, Quaternion.identity, raycastDistance);
+
+        foreach (RaycastHit hit in hits)
         {
-            Bounds propBounds = spawner.instantiatedProp.GetComponentInChildren<MeshRenderer>().bounds;
-            propBounds.size *= 0.5f;
-
-            if (GeometryUtility.TestPlanesAABB(cameraFrustum, propBounds))
+            if(hit.transform.gameObject.tag == "GlitchedProp")
             {
-                RaycastHit hit;
-                if(Physics.Raycast(transform.position, spawner.instantiatedProp.transform.position - transform.position, out hit, raycastDistance))
-                {
-                    if(hit.transform.gameObject.tag == "GlitchedProp")
-                    {
-                        enemyPropInCam = true;
-                        break;
-                    }
-                }
-            }
+                pos = hit.transform.position;
+                RaycastHit checkHit;
+                Physics.Raycast(hit.transform.position, this.transform.position - hit.transform.position, out checkHit, Mathf.Infinity);
+                enemyPropInCam = checkHit.transform.name == "Player";
+                break;
+            }  
         }
 
         return enemyPropInCam;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(pos != Vector3.zero)
+            Gizmos.DrawRay(pos, this.transform.position - pos);
     }
 }

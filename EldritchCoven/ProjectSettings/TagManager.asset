@@ -7,6 +7,7 @@ TagManager:
   - Wood
   - Dirt
   - GlitchedProp
+  - Polaroid
   layers:
   - Default
   - TransparentFX
