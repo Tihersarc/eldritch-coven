@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
         collider = enemy.GetComponentInChildren<Collider>().gameObject;
-        collider.SetActive(false);
+        //collider.SetActive(false);
         enemy.transform.position = spawnPoint.position;
         enemy.transform.rotation = enemyRotation;
         spawnedEnemy = enemy;
@@ -45,6 +45,7 @@ public class EnemySpawner : MonoBehaviour
         collider.SetActive(true);
         hiddenScript.ShowHiddenObject();
         spawnedEnemy.GetComponent<StateController>().enabled = true;
+        hiddenScript.enabled = false;
     }
 
     public void RemoveSpawner()
@@ -55,9 +56,6 @@ public class EnemySpawner : MonoBehaviour
         spawnManager.spawners.Remove(this);
     }
 
-    private void OnDestroy()
-    {
-    }
     public void SetSpawnerManager(EnemySpawnManager enemySpawnManager)
     {
 #if UNITY_EDITOR
