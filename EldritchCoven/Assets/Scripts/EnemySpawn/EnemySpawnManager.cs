@@ -36,10 +36,12 @@ public class EnemySpawnManager : MonoBehaviour
     public List<EnemySpawner> spawners = new List<EnemySpawner>();
     [SerializeField] int spawnTime;
     float currentTimeToSpawn;
+    bool canSpawn = false;
 
     private void Awake()
     {
         instance = this.GetComponent<EnemySpawnManager>();
+        PlayerEnterTrigger.OnEnter += () => { canSpawn = true; };
     }
 
     void Start()
@@ -49,15 +51,18 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Update()
     {
-        if( currentTimeToSpawn > spawnTime )
+        if (canSpawn)
         {
-            EnemySpawner enemy = spawners[Random.Range(0, spawners.Count)];
-            enemy.Spawn();
-            currentTimeToSpawn = 0f;
-        }
-        else
-        {
-            currentTimeToSpawn += Time.deltaTime;
+            if (currentTimeToSpawn > spawnTime)
+            {
+                EnemySpawner enemy = spawners[Random.Range(0, spawners.Count)];
+                enemy.Spawn();
+                currentTimeToSpawn = 0f;
+            }
+            else
+            {
+                currentTimeToSpawn += Time.deltaTime;
+            }
         }
     }
 

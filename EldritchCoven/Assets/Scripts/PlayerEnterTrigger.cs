@@ -1,18 +1,45 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerEnterTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject[] portals;
+    public static Action OnEnter;
+    [SerializeField] GameObject[] gameObjectsToDestroy;
+    [SerializeField] RenderPlaneRayCaster portalPlaneToCheck;
+    Coroutine coroutine;
+
+    bool once = false;
+
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (var p in portals)
+        OnEnter?.Invoke();
+
+        if (coroutine == null)
         {
-            p.gameObject.SetActive(false);
+            coroutine = StartCoroutine(_CheckPortalInCam());
+        }
+    }
+    IEnumerator _CheckPortalInCam()
+    {
+        Physics.SyncTransforms();
+        while (CheckFrustrumVisibility())
+        {
+            yield return null;
         }
 
-        this.gameObject.SetActive(false);
+
+        foreach (GameObject obj in gameObjectsToDestroy)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    private bool CheckFrustrumVisibility()
+    {
+        Plane[] cameraFrustum = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+        return GeometryUtility.TestPlanesAABB(cameraFrustum, portalPlaneToCheck.GetComponent<Collider>().bounds);
+
     }
 }

@@ -41,6 +41,5 @@ public class InCamDetector : MonoBehaviour
                 otherRenderPlane.GetComponent<RenderPlaneRayCaster>().CheckVisibility(cam, renderPlane);
             }
         }
-
     }
 }
