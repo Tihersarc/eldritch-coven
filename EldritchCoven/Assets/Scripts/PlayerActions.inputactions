@@ -334,6 +334,28 @@
                 },
                 {
                     "name": "",
+                    "id": "c76f535c-dd45-4b85-b95f-b22c8d894ae8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73575f85-8619-40f4-b024-99158ab61d94",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3997df27-830f-4f4e-a6c3-50506bae7a0d",
                     "path": "<Mouse>/scroll",
                     "interactions": "",
@@ -375,17 +397,6 @@
                     "action": "ChangeItem",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "c76f535c-dd45-4b85-b95f-b22c8d894ae8",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
