@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class PauseBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+
+    [SerializeField] private bool isMainMenu;
     public bool IsPaused { get; set; }
 
     private static PauseBehaviour instance;
@@ -23,7 +25,18 @@ public class PauseBehaviour : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        IsPaused = false;
+        if (isMainMenu)
+        {
+            Time.timeScale = 1;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            IsPaused = false;
+            TogglePause(IsPaused);
+        }
+        
     }
 
     public bool TogglePause()
@@ -32,7 +45,8 @@ public class PauseBehaviour : MonoBehaviour
         {
             IsPaused = false;
             Time.timeScale = 1;
-            pauseMenu.SetActive(IsPaused);
+            if (pauseMenu != null)
+                pauseMenu.SetActive(IsPaused);
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -41,13 +55,39 @@ public class PauseBehaviour : MonoBehaviour
         {
             IsPaused = true;
             Time.timeScale = 0;
-            if(pauseMenu != null)
+            if (pauseMenu != null)
                 pauseMenu.SetActive(IsPaused);
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         
+        return IsPaused;
+    }
+
+    public bool TogglePause(bool pauseState)
+    {
+        if (!pauseState)
+        {
+            IsPaused = false;
+            Time.timeScale = 1;
+            if (pauseMenu != null)
+                pauseMenu.SetActive(IsPaused);
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            IsPaused = true;
+            Time.timeScale = 0;
+            if (pauseMenu != null)
+                pauseMenu.SetActive(IsPaused);
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         return IsPaused;
     }
 }

@@ -52,5 +52,6 @@ public class InCamDetector : MonoBehaviour
     private void OnDestroy()
     {
         cam = null;
+        Portal.OnTravelPortal -= CheckFrustrumVisibility;
     }
 }

@@ -26,4 +26,9 @@ public class PortalCamera : MonoBehaviour
         var m = portal.transform.localToWorldMatrix * otherPortal.worldToLocalMatrix * referenceCamera.transform.localToWorldMatrix;
         transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
     }
+
+    private void OnDestroy()
+    {
+        Portal.OnTravelPortal -= MoveCamera;
+    }
 }
