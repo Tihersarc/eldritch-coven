@@ -9,9 +9,9 @@ public class InCamDetector : MonoBehaviour
     Plane[] cameraFrustum;
     Camera cam;
 
-    private void Awake()
+    private void Start()
     {
-        cam = this.gameObject.GetComponent<Camera>();
+        cam = gameObject.GetComponent<Camera>();
         Portal.OnTravelPortal += CheckFrustrumVisibility;
     }
 
@@ -32,6 +32,11 @@ public class InCamDetector : MonoBehaviour
 
     public void CheckFrustrumVisibility()
     {
+        if (cam == null)
+        {
+            cam = gameObject.GetComponent<Camera>();
+            
+        }
         cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
 
         foreach (MeshRenderer otherRenderPlane in GameLogic.instance.renderPlanes)
@@ -42,5 +47,10 @@ public class InCamDetector : MonoBehaviour
             }
         }
 
+    }
+
+    private void OnDestroy()
+    {
+        cam = null;
     }
 }

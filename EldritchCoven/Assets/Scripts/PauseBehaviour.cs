@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +26,7 @@ public class PauseBehaviour : MonoBehaviour
         IsPaused = false;
     }
 
-    public void TogglePause()
+    public bool TogglePause()
     {
         if (IsPaused)
         {
@@ -46,7 +47,7 @@ public class PauseBehaviour : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+        
+        return IsPaused;
     }
-
-    
 }
