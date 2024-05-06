@@ -10,6 +10,7 @@ public class Polaroid : MonoBehaviour
     [SerializeField] private AnimationTest anim;
     [SerializeField] private float animationTime = 0;
     [SerializeField] private float animationDuration = 0.3f;
+    [SerializeField] GameObject pointer;
     private bool playingAnimation = false;
 
     private void Start()
@@ -59,6 +60,7 @@ public class Polaroid : MonoBehaviour
                     usingCamera = true;
                 }
                 playingAnimation = true;
+                pointer.SetActive(!pointer.activeSelf);
             }
         }
     }

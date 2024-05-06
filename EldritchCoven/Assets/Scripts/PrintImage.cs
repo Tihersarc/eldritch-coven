@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PrintImage : MonoBehaviour
 {
+    [SerializeField] int[] resolution = new int[2] {1920, 1080};
     Texture2D texture;
 
     private void Start()
     {
-        texture = new Texture2D(1920, 1080, TextureFormat.RGB24, false);
+        texture = new Texture2D(resolution[0], resolution[1], TextureFormat.RGB24, false);
     }
 
     public void ConvertToImage(RenderTexture rTexture)
