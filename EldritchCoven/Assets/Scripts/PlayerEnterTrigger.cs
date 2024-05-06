@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerEnterTrigger : MonoBehaviour
 {
     public static Action OnEnter;
+    public UnityEvent OnEnterEvent;
     [SerializeField] GameObject[] gameObjectsToDestroy;
     [SerializeField] RenderPlaneRayCaster portalPlaneToCheck;
     Coroutine coroutine;
@@ -15,6 +17,7 @@ public class PlayerEnterTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         OnEnter?.Invoke();
+        OnEnterEvent?.Invoke();
 
         if (coroutine == null)
         {
