@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
 
     public void Interact()
     {
+        Debug.Log("boton animate plis");
         anim.Play();
         ButtonManager.instance.AddButtonToCurrentSequence(this);
     }
