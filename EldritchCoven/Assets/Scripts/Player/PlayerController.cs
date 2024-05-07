@@ -98,10 +98,8 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             Button button;
             Door door;
-            Debug.Log("hola pepsicola");
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
             {
-                Debug.Log(hit.transform.gameObject.name);
                 if (hit.transform.TryGetComponent<Button>(out button))
                 {
                     button.Interact();
