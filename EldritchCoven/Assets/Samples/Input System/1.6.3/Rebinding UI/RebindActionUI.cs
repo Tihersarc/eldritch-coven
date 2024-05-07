@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using TMPro;
+using static UnityEngine.InputSystem.DefaultInputActions;
 ////TODO: localization support
 
 ////TODO: deal with composites that have parts bound in different control schemes
@@ -13,6 +14,11 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
     /// </summary>
     public class RebindActionUI : MonoBehaviour
     {
+        private void Start()
+        {
+            
+        }
+
         /// <summary>
         /// Reference to the action that is to be rebound.
         /// </summary>
