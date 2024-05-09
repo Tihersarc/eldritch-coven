@@ -108,7 +108,7 @@ public class Portal : MonoBehaviour
         Transform screenT = screen.transform;
         bool camFacingSameDirAsPortal = Vector3.Dot(transform.forward, transform.position - viewPoint) > 0;
         screenT.localScale = new Vector3(screenT.localScale.x, screenThickness, screenT.localScale.z);
-        screenT.localPosition = new Vector3(screenT.localPosition.x, screenT.localPosition.y, screenThickness * ((camFacingSameDirAsPortal) ? 0.5f : -0.5f));
+        //screenT.localPosition = new Vector3(screenT.localPosition.x, screenT.localPosition.y, screenThickness * ((camFacingSameDirAsPortal) ? 0.5f : -0.5f));
     }
 
     // Cambia el near clip plane para que los objetos que estan entre el portal y la camara no aparezcan
