@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static MainCamera;
 
 public class PauseBehaviour : MonoBehaviour
 {
+    public delegate void ChangeKeys();
+    public static event ChangeKeys onKeysChanged;
+
     [SerializeField] private GameObject pauseMenu;
 
     [SerializeField] private bool isMainMenu;
@@ -43,6 +47,7 @@ public class PauseBehaviour : MonoBehaviour
     {
         if (IsPaused)
         {
+            onKeysChanged?.Invoke();
             IsPaused = false;
             Time.timeScale = 1;
             if (pauseMenu != null)
@@ -69,6 +74,7 @@ public class PauseBehaviour : MonoBehaviour
     {
         if (!pauseState)
         {
+            onKeysChanged?.Invoke();
             IsPaused = false;
             Time.timeScale = 1;
             if (pauseMenu != null)
