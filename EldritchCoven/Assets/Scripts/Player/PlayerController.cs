@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 using static UnityEngine.InputSystem.DefaultInputActions;
 
 public class PlayerController : MonoBehaviour
@@ -29,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
 
     private PlayerInput playerInput;
-    [SerializeField] private InputActionAsset _input;
 
     private void Start()
     {
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if (!PauseBehaviour.Instance.IsPaused)
         {
             moveInput = input.Get<Vector2>();
+            Debug.Log(moveInput);
         }
     }
 
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour
                     door.Interact();
                 }
             }
-            
+
         }
     }
 }
