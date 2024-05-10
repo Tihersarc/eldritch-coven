@@ -208,9 +208,9 @@ namespace Michsky.UI.Dark
             else if (index == 1) { QualitySettings.realtimeReflectionProbes = true; }
         }
 
-        public void VolumeSetMaster(float volume) { generalVCA.setVolume(volume); }
-        public void VolumeSetMusic(float volume) { musicVCA.setVolume(volume); }
-        public void VolumeSetSFX(float volume) { sfxVCA.setVolume(volume); }
+        public void VolumeSetMaster(float volume) { generalVCA.setVolume(volume); PlayerPrefs.SetFloat("Master Volume" + "DarkSliderValue", volume);}
+        public void VolumeSetMusic(float volume) { musicVCA.setVolume(volume); PlayerPrefs.SetFloat("Music Volume" + "DarkSliderValue", volume); }
+        public void VolumeSetSFX(float volume) { sfxVCA.setVolume(volume); PlayerPrefs.SetFloat("SFX Volume" + "DarkSliderValue", volume); }
 
         public void SetOverallQuality(int qualityIndex)
         {
