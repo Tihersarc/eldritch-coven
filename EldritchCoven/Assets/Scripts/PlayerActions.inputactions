@@ -51,24 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "OpenInventory",
-                    "type": "Button",
-                    "id": "b9c4020f-b48d-4244-b600-f10882258d18",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ChangeItem",
-                    "type": "Value",
-                    "id": "0803333d-4ed0-45b3-8dcb-05699c84d6a2",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "1e2d19d0-32b2-4525-8104-50993b060399",
@@ -268,28 +250,6 @@
                 },
                 {
                     "name": "",
-                    "id": "847df985-872c-40e2-9d49-f86274e4b9ee",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenInventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "41c204be-0703-4cee-b5ab-fa329233c227",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenInventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c76f535c-dd45-4b85-b95f-b22c8d894ae8",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -309,50 +269,6 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3997df27-830f-4f4e-a6c3-50506bae7a0d",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "9c5d72cd-071e-412e-b229-3b6749a67e9a",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeItem",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "91cc6927-551e-47ca-8bda-38bed082fe0a",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeItem",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "bfec2fc1-e978-4294-8ecb-7280411b24b9",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeItem",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         },
