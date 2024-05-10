@@ -61,7 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 2800000, guid: 6ceddece9107f6d4db9b8ce5df5f963c, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.27, y: -0.51}
         m_Offset: {x: 0, y: 0}
     - _DetailMetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -165,7 +165,7 @@ Material:
     - _Glossiness: 0.88
     - _Glossiness2: 0.766
     - _GlossyReflections: 1
-    - _Intensity: 1
+    - _Intensity: 3.07
     - _IntensityMask: 1
     - _InvertABaseColor: 0
     - _InvertMask: 0
@@ -192,7 +192,7 @@ Material:
     - _SpecularIntensity: 0.087
     - _SpecularIntensity1: 0.74
     - _SpecularIntensity2: 0.149
-    - _SpreadDetailMap: 0.632
+    - _SpreadDetailMap: 0.347
     - _SrcBlend: 1
     - _SwitchColor: 0
     - _UVSec: 0
