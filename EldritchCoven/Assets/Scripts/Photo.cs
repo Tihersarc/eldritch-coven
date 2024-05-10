@@ -28,30 +28,23 @@ public class Photo : MonoBehaviour
         revealImage.TakePhoto();
     }
 
-    public void OnTakePhoto(InputAction.CallbackContext ctx)
+    public void TakePhoto()
     {
-        if (!PauseBehaviour.Instance.IsPaused)
-        {
-            if (ctx.performed)
-            {
-                anim.SetTrigger("HasTakenPhoto");
-            }
-        }
+        anim.SetTrigger("HasTakenPhoto");
     }
 
-    public void OnReveal(InputAction.CallbackContext ctx)
+    public void Reveal(bool performed)
     {
-        if (!PauseBehaviour.Instance.IsPaused)
+        if (performed)
         {
-            if (ctx.performed)
-            {
-                anim.SetBool("Revealing", true);
-            }
+            Debug.Log("UwU");
+            anim.SetBool("Revealing", true);
+        }
 
-            if (ctx.canceled)
-            {
-                anim.SetBool("Revealing", false);
-            }
+        if (!performed)
+        {
+            Debug.Log("OwO");
+            anim.SetBool("Revealing", false);
         }
     }
 

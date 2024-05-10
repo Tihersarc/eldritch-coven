@@ -1,6 +1,7 @@
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
@@ -27,6 +28,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
     [SerializeField] private StudioEventEmitter cameraSoundEmitter;
+    [SerializeField] private Photo photo;
+    [SerializeField] private Polaroid polaroid;
+    [SerializeField] private RevealImage Image;
 
 
     private PlayerInput playerInput;
@@ -68,16 +72,16 @@ public class PlayerController : MonoBehaviour
         playerInput.actions.FindActionMap("Pause").Enable();
     }
 
-    void OnMove(InputValue input)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
         if (!PauseBehaviour.Instance.IsPaused)
         {
-            moveInput = input.Get<Vector2>();
+            moveInput = ctx.ReadValue<Vector2>();
             Debug.Log(moveInput);
         }
     }
 
-    void OnTakePhoto(InputValue input)
+    public void OnTakePhoto(InputAction.CallbackContext ctx)
     {
         if (!PauseBehaviour.Instance.IsPaused)
         {
@@ -86,18 +90,25 @@ public class PlayerController : MonoBehaviour
             plane.GetComponent<PrintImage>().ConvertToImage(cameraPhotos.targetTexture);
             hideObjects?.Invoke();
             cameraSoundEmitter.Play();
+
+            if (ctx.performed)
+            {
+                photo.TakePhoto();
+                Image.TakePhoto();
+            }
         }
     }
 
-    void OnPause(InputValue input)
+    public void OnPause(InputAction.CallbackContext ctx)
     {
         PauseBehaviour.Instance.TogglePause();
     }
 
-    void OnInteract(InputValue input)
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!PauseBehaviour.Instance.IsPaused)
         {
+            Debug.Log("O_O");
             RaycastHit hit;
             Button button;
             Door door;
@@ -116,4 +127,46 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+    public void OnReveal(InputAction.CallbackContext ctx)
+    {
+        if (!PauseBehaviour.Instance.IsPaused)
+        {
+            if (ctx.performed)
+            {
+                photo.Reveal(true);
+                Image.Reveal(true);
+            }
+            if (ctx.canceled)
+            {
+                photo.Reveal(!true);
+                Image.Reveal(!true);
+            }
+        }
+    }
+
+    public void OnAimCamera(InputAction.CallbackContext ctx)
+    {
+        if (!PauseBehaviour.Instance.IsPaused)
+        {
+            if (ctx.performed)
+            {
+                polaroid.AimCamera();
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
