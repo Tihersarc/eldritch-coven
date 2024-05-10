@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
         if (!PauseBehaviour.Instance.IsPaused)
         {
             moveInput = ctx.ReadValue<Vector2>();
-            Debug.Log(moveInput);
         }
     }
 
