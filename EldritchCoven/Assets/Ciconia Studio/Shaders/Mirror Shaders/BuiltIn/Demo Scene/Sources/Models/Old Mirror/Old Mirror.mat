@@ -162,11 +162,11 @@ Material:
     - _FresnelStrength: 0
     - _GlassNormalIntensity: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.88
+    - _Glossiness: 0
     - _Glossiness2: 0.766
     - _GlossyReflections: 1
     - _Intensity: 3.07
-    - _IntensityMask: 1
+    - _IntensityMask: 0.65
     - _InvertABaseColor: 0
     - _InvertMask: 0
     - _InvertReflection: 1
@@ -175,7 +175,7 @@ Material:
     - _InvertTransparencyMask: 0
     - _MaskIntensity: 1
     - _MaskSpread: 2.8
-    - _Metallic: 0.9
+    - _Metallic: 0.92
     - _Mode: 0
     - _NormalBlend: 0
     - _NormalIntensity: 2
@@ -192,7 +192,7 @@ Material:
     - _SpecularIntensity: 0.087
     - _SpecularIntensity1: 0.74
     - _SpecularIntensity2: 0.149
-    - _SpreadDetailMap: 0.347
+    - _SpreadDetailMap: 0.496
     - _SrcBlend: 1
     - _SwitchColor: 0
     - _UVSec: 0
