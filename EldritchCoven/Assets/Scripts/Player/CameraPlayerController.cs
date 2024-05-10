@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
@@ -11,8 +13,10 @@ public class CameraPlayerController : MonoBehaviour
     public static Action onMoveCamera;
     private Camera playerCamera;
     [SerializeField] private float sensitivity = 2.0f;
+    [SerializeField] private float controllerSensitivityMultiplier = 10f;
     [SerializeField] private float rotLimit = 45.0f;
     [SerializeField] private InputActionAsset playerControls;
+    [SerializeField] private PlayerInput playerInput;
     private float rotationX = 0.0f;
 
     Rigidbody rb;
@@ -54,8 +58,16 @@ public class CameraPlayerController : MonoBehaviour
     private void MoveCamera()
     {
         //mouse movement per frame
-        mouseX = lookInput.x * sensitivity;
-        mouseY -= lookInput.y * sensitivity;
+        if (playerInput.currentControlScheme.Contains("Key"))
+        {
+            mouseX = lookInput.x * sensitivity;
+            mouseY -= lookInput.y * sensitivity;
+        }
+        else
+        {
+            mouseX = lookInput.x * sensitivity * controllerSensitivityMultiplier;
+            mouseY -= lookInput.y * sensitivity * controllerSensitivityMultiplier;
+        }
 
         //// X-axis rotation (vertical) with limits
         //rotationX -= mouseY;

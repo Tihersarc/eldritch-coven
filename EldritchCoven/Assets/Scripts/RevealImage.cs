@@ -17,14 +17,14 @@ public class RevealImage : MonoBehaviour
         anim.Play("ImageFade");
     }
 
-    public void OnReveal(InputAction.CallbackContext ctx)
+    public void Reveal(bool performed)
     {
-        if (ctx.performed)
+        if (performed)
         {
             anim.ResetTrigger("NewImage");
             anim.speed = 1;
         }
-        if (ctx.canceled)
+        if (!performed)
         {
             anim.speed = 0;
         }

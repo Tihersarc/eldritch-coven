@@ -45,23 +45,17 @@ public class Polaroid : MonoBehaviour
         }
     }
 
-    public void OnAimCamera(InputAction.CallbackContext ctx)
+    public void AimCamera()
     {
-        if (!PauseBehaviour.Instance.IsPaused)
+        if (usingCamera)
         {
-            if (ctx.performed)
-            {
-                if (usingCamera)
-                {
-                    usingCamera = false;
-                }
-                else
-                {
-                    usingCamera = true;
-                }
-                playingAnimation = true;
-                pointer.SetActive(!pointer.activeSelf);
-            }
+            usingCamera = false;
         }
+        else
+        {
+            usingCamera = true;
+        }
+        playingAnimation = true;
+                pointer.SetActive(!pointer.activeSelf);
     }
 }
