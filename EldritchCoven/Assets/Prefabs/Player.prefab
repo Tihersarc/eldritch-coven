@@ -800,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderPlane: {fileID: 9219246608532508875}
+  portalPlaneLayer: 0
 --- !u!114 &3261938521524615877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4183,6 +4184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 2
   rotLimit: 80
+  playerControls: {fileID: -944628639613478452, guid: 28b5a211b89c91c40b03127030c1ee7c, type: 3}
 --- !u!114 &3458464929939674132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,6 +5115,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   colorIntensityCurveDuration: 2
+  raycastDistance: 4
 --- !u!111 &3574783393435720362 stripped
 Animation:
   m_CorrespondingSourceObject: {fileID: 5154149898742937106, guid: 8a759c41cd49de84b89bdfe44a4f86f7, type: 3}
