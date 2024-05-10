@@ -3,6 +3,7 @@ using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,17 +14,17 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance { get; private set; }
 
-    VCA generalVCA;
-    VCA sfxVCA;
-    VCA musicVCA;
+    private VCA generalVCA;
+    private VCA sfxVCA;
+    private VCA musicVCA;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
 
 
     public void Start()
     {
-        generalVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + generalVCAPath);
-        sfxVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + SFXVCAPath);
-        musicVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + musicVCAPath);
-
         if (Instance == null)
         {
             Instance = this;
@@ -32,6 +33,27 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        generalVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + generalVCAPath);
+        sfxVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + SFXVCAPath);
+        musicVCA = FMODUnity.RuntimeManager.GetVCA(VCAPath + musicVCAPath);
+
+        var master = PlayerPrefs.GetFloat("Master Volume" + "DarkSliderValue");
+        var sfx = PlayerPrefs.GetFloat("SFX Volume" + "DarkSliderValue");
+        var music = PlayerPrefs.GetFloat("Music Volume" + "DarkSliderValue");
+
+        generalVCA.setVolume(master);
+        sfxVCA.setVolume(sfx);
+        musicVCA.setVolume(music);
+
+        if (masterSlider)
+            musicSlider.value = master;
+
+        if (sfxSlider)
+            sfxSlider.value = sfx;
+
+        if (musicSlider)
+            musicSlider.value = music;
     }
 
     public void ChangeMasterVolume(float volume)
