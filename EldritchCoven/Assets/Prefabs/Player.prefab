@@ -331,7 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67cb0529bce729f439ded2b845993918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91c20035cc3d6ba4db72fd00f1b8f409, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4199,8 +4199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.3
+  controllerSensitivityMultiplier: 10
   rotLimit: 80
   playerControls: {fileID: -944628639613478452, guid: 28b5a211b89c91c40b03127030c1ee7c, type: 3}
+  playerInput: {fileID: 0}
 --- !u!114 &3458464929939674132
 MonoBehaviour:
   m_ObjectHideFlags: 0
