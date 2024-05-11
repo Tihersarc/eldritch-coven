@@ -30,10 +30,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5438362203319170238}
-  - {fileID: 5647355833564159710}
+  - {fileID: 7454238981791399869}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1148297747182767796
+--- !u!1001 &2792834705780387799
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -85,15 +85,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle Point Light
       objectReference: {fileID: 0}
+    - target: {fileID: 5363401111388714890, guid: 86ed438b046663c439f210aef3ec88af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ed438b046663c439f210aef3ec88af, type: 3}
---- !u!4 &5647355833564159710 stripped
+--- !u!4 &7454238981791399869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4733532257395380330, guid: 86ed438b046663c439f210aef3ec88af, type: 3}
-  m_PrefabInstance: {fileID: 1148297747182767796}
+  m_PrefabInstance: {fileID: 2792834705780387799}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3709365337772994007
 PrefabInstance:
@@ -106,6 +110,18 @@ PrefabInstance:
     - target: {fileID: 3199069445854366748, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
       propertyPath: m_Name
       value: CandleParticle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4419
       objectReference: {fileID: 0}
     - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
       propertyPath: m_LocalPosition.x
