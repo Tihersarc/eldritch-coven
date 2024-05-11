@@ -4199,7 +4199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.3
-  controllerSensitivityMultiplier: 10
+  controllerSensitivityMultiplier: 3
   rotLimit: 80
   playerControls: {fileID: -944628639613478452, guid: 28b5a211b89c91c40b03127030c1ee7c, type: 3}
   playerInput: {fileID: 0}

@@ -37,13 +37,11 @@ public class Photo : MonoBehaviour
     {
         if (performed)
         {
-            Debug.Log("UwU");
             anim.SetBool("Revealing", true);
         }
 
         if (!performed)
         {
-            Debug.Log("OwO");
             anim.SetBool("Revealing", false);
         }
     }

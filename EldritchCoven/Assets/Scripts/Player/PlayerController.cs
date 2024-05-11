@@ -107,7 +107,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!PauseBehaviour.Instance.IsPaused)
         {
-            Debug.Log("O_O");
             RaycastHit hit;
             Button button;
             Door door;
