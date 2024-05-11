@@ -84,3 +84,4 @@ fmod/[Aa]ssets/StreamingAssets/**/*.bank.meta
 fmod/fmod_editor.log
 EldritchCoven/fmod_editor.log
 EldritchCoven/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+/fmod/.cache
