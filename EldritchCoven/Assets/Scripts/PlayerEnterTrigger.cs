@@ -11,17 +11,20 @@ public class PlayerEnterTrigger : MonoBehaviour
     [SerializeField] RenderPlaneRayCaster portalPlaneToCheck;
     Coroutine coroutine;
 
-    bool once = false;
-
 
     private void OnTriggerEnter(Collider other)
     {
-        OnEnter?.Invoke();
-        OnEnterEvent?.Invoke();
-
-        if (coroutine == null)
+        Debug.Log("fkpoas");
+        if (other.transform.gameObject.CompareTag("Player"))
         {
-            coroutine = StartCoroutine(_CheckPortalInCam());
+            Debug.Log("tu puta madre");
+            OnEnter?.Invoke();
+            OnEnterEvent?.Invoke();
+
+            if (coroutine == null)
+            {
+                coroutine = StartCoroutine(_CheckPortalInCam());
+            }
         }
     }
     IEnumerator _CheckPortalInCam()
