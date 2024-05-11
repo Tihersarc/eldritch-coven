@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class PageManager : MonoBehaviour
 {
-    [SerializeField] private GameObject ui;
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private GameObject pageUi;
     [SerializeField] private TextMeshProUGUI pageText;
     [SerializeField] private TextMeshProUGUI uiText;
+
+    [Header("Objects to disable")]
+    [SerializeField] private List<GameObject> objects;
 
     private static PageManager instance;
     public static PageManager Instance { get { return instance; } }
@@ -32,11 +36,21 @@ public class PageManager : MonoBehaviour
 
     public void EnableUi()
     {
-        ui.SetActive(true);
+        pageUi.SetActive(true);
+        playerController.DisablePlayerActionMap();
+        objects.ForEach(o => o.SetActive(false));
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void DisableUi()
     {
-        ui.SetActive(false);
+        pageUi.SetActive(false);
+        objects.ForEach(o => o.SetActive(true));
+        playerController.EnablePlayerActionMap();
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

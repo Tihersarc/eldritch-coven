@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Page : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI uiText;
     private string text;
 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>().text;
+        text = uiText.text;
     }
 
     public void Interact()

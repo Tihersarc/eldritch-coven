@@ -73,6 +73,18 @@ public class PlayerController : MonoBehaviour
         playerInput.actions.FindActionMap("Pause").Enable();
     }
 
+    public void DisablePlayerActionMap()
+    {
+        playerInput.actions.FindActionMap("Player").Disable();
+        playerInput.actions.FindActionMap("Player").Disable();
+    }
+
+    public void EnablePlayerActionMap()
+    {
+        playerInput.actions.FindActionMap("Player").Enable();
+        playerInput.actions.FindActionMap("Pause").Enable();
+    }
+
     public void OnMove(InputAction.CallbackContext ctx)
     {
         if (!PauseBehaviour.Instance.IsPaused)
@@ -123,7 +135,6 @@ public class PlayerController : MonoBehaviour
                 {
                     door.Interact();
                 }
-                
                 if (hit.transform.TryGetComponent<Page>(out page))
                 {
                     page.Interact();
