@@ -50,6 +50,12 @@ public class PlayerController : MonoBehaviour
     {
         //stepsPlayer.MaterialCheck();
         //GetComponentInChildren<StepsPlayer>().MaterialCheck();
+
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
+        {
+            Outline outline = hit.transform.gameObject.GetComponent<Outline>();
+        }
     }
 
     private void FixedUpdate()
