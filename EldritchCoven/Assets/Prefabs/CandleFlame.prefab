@@ -112,6 +112,18 @@ PrefabInstance:
       value: CandleParticle System
       objectReference: {fileID: 0}
     - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647651818998126953, guid: d58abadb1f047cc49ad547115ddd0a76, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
