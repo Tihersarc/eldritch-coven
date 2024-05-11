@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
     {
         doorSoundEmitter = GetComponentInChildren<StudioEventEmitter>();
     }
+
     public void Interact()
     {
         doorSoundEmitter.Play();

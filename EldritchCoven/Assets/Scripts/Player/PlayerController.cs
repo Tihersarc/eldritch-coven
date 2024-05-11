@@ -2,6 +2,7 @@ using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
@@ -78,6 +79,18 @@ public class PlayerController : MonoBehaviour
         playerInput.actions.FindActionMap("Pause").Enable();
     }
 
+    public void DisablePlayerActionMap()
+    {
+        playerInput.actions.FindActionMap("Player").Disable();
+        playerInput.actions.FindActionMap("Player").Disable();
+    }
+
+    public void EnablePlayerActionMap()
+    {
+        playerInput.actions.FindActionMap("Player").Enable();
+        playerInput.actions.FindActionMap("Pause").Enable();
+    }
+
     public void OnMove(InputAction.CallbackContext ctx)
     {
         if (!PauseBehaviour.Instance.IsPaused)
@@ -116,6 +129,7 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             Button button;
             Door door;
+            Page page;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
             {
                 if (hit.transform.TryGetComponent<Button>(out button))
@@ -126,6 +140,10 @@ public class PlayerController : MonoBehaviour
                 if (hit.transform.TryGetComponent<Door>(out door))
                 {
                     door.Interact();
+                }
+                if (hit.transform.TryGetComponent<Page>(out page))
+                {
+                    page.Interact();
                 }
             }
 
