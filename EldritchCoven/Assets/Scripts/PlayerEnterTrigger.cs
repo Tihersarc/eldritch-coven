@@ -14,10 +14,8 @@ public class PlayerEnterTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("fkpoas");
         if (other.transform.gameObject.CompareTag("Player"))
         {
-            Debug.Log("tu puta madre");
             OnEnter?.Invoke();
             OnEnterEvent?.Invoke();
 

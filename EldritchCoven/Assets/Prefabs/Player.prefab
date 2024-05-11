@@ -3132,6 +3132,7 @@ GameObject:
   - component: {fileID: 6352377551511084264}
   - component: {fileID: 4961566643417286634}
   - component: {fileID: 5588892249595507235}
+  - component: {fileID: 3034197588934249191}
   m_Layer: 0
   m_Name: PlayerAudio
   m_TagString: Untagged
@@ -3171,6 +3172,19 @@ MonoBehaviour:
   distance: 0.5
   stepsEmitter: {fileID: 3313667891465230403}
 --- !u!114 &5588892249595507235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754209383717798669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!114 &3034197588934249191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
