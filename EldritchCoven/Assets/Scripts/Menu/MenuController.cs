@@ -39,7 +39,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenuBeta");
+        SceneManager.LoadScene(0);
     }
 
     public void Quit()
