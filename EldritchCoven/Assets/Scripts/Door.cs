@@ -6,6 +6,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     bool opened = false;
+    [SerializeField] bool keyNeeded;
     [SerializeField] StudioEventEmitter doorSoundEmitter;
 
     private void Awake()
