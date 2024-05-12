@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         stairBehaviour = GetComponent<StairBehaviour>();
         playerInput = GetComponent<PlayerInput>();
 
-        EnableActionMaps();
+        //EnableActionMaps();
 
         //stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
     public void DisablePlayerActionMap()
     {
         playerInput.actions.FindActionMap("Player").Disable();
-        playerInput.actions.FindActionMap("Player").Disable();
+        playerInput.actions.FindActionMap("Pause").Disable();
     }
 
     public void EnablePlayerActionMap()

@@ -11,7 +11,7 @@ public class TypeWriter : MonoBehaviour
     string currentText;
     
     void Start()
-    {
+    {  
         fullText = this.GetComponent<TextMeshProUGUI>().text;
         this.GetComponent<TextMeshProUGUI>().text = string.Empty;
         Invoke("StartTypeWriteing", 3f);
@@ -20,6 +20,7 @@ public class TypeWriter : MonoBehaviour
     [ContextMenu("StartTypeWriteing")]
     public void StartTypeWriteing()
     {
+        GameLogic.instance.playerController.DisablePlayerActionMap();
         StartCoroutine(ShowText());
     }
     
@@ -38,6 +39,7 @@ public class TypeWriter : MonoBehaviour
                 yield return new WaitForSeconds(delay);
             }
         }
+        GameLogic.instance.playerController.EnablePlayerActionMap();
     }
 
 }
