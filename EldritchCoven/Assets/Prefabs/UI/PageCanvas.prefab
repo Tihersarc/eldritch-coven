@@ -2899,22 +2899,6 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 0.001
       objectReference: {fileID: 0}
-    - target: {fileID: 4238200117289731702, guid: 98ec5194a3a4a9f469fd16ac45854aa4, type: 3}
-      propertyPath: m_lineSpacing
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4238200117289731702, guid: 98ec5194a3a4a9f469fd16ac45854aa4, type: 3}
-      propertyPath: m_wordSpacing
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4238200117289731702, guid: 98ec5194a3a4a9f469fd16ac45854aa4, type: 3}
-      propertyPath: m_characterSpacing
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4238200117289731702, guid: 98ec5194a3a4a9f469fd16ac45854aa4, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7895574390857009242, guid: 98ec5194a3a4a9f469fd16ac45854aa4, type: 3}
       propertyPath: m_IsActive
       value: 1
