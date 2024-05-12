@@ -139,6 +139,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (1)
@@ -212,6 +232,26 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 2.3833e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 6e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 1.3e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
@@ -287,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (6)
@@ -357,9 +401,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2684702754019379301}
     m_Modifications:
+    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 4.591775e-39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.02e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 4.67e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 3.1367e-41
+      objectReference: {fileID: 0}
     - target: {fileID: 6405746995456850904, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
       propertyPath: m_Name
       value: 'Point Light '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708404805233635648, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
+      propertyPath: maxOffset
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5700073
       objectReference: {fileID: 0}
     - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -422,6 +486,10 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
@@ -497,6 +565,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (2)
@@ -570,6 +642,26 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.6891e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 6e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.9e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
@@ -645,6 +737,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.02e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 3.7e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 2.0636e-41
+      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (7)
@@ -718,6 +830,26 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
