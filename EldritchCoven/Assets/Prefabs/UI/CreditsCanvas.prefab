@@ -193,7 +193,12 @@ MonoBehaviour:
 
     Carles Rabadan
 
-    Yan Vescovi'
+    Yan Vescovi
+
+
+    Quim Barcelo
+
+    David Sanz'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d452d52c272ff8442a3fce75bd39af55, type: 2}
   m_sharedMaterial: {fileID: 21513131424051102, guid: d452d52c272ff8442a3fce75bd39af55, type: 2}
@@ -515,6 +520,12 @@ MonoBehaviour:
 
 
     Sound and Music
+
+
+
+
+
+    Shaders
 
 
 
