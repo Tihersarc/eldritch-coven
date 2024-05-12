@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    public UnityEvent OnTakePhotoEvent;
     [SerializeField] GameObject glitchedCamera;
 
     private void Start()
