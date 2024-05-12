@@ -6,7 +6,11 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     bool opened = false;
-    [SerializeField] bool keyNeeded;
+    [SerializeField] bool canOpen = true;
+    public bool CanOpen { set { canOpen = value; }}
+
+    [SerializeField] bool objectNeeded;
+    [SerializeField] GameObject objectToOpen;
     [SerializeField] StudioEventEmitter doorSoundEmitter;
 
     private void Awake()
@@ -16,14 +20,28 @@ public class Door : MonoBehaviour
 
     public void Interact()
     {
-        doorSoundEmitter.Play();
+        if (objectNeeded)
+        {
+            if (GameLogic.instance.playerController.gameObject.GetComponent<Inventory>().objetctsInInventory.Contains(objectToOpen))
+            {
+                canOpen = true;
+            }
+            else
+            {
+                canOpen = false;
+            }
+        }
 
-        if (!opened)
-            GetComponent<Animator>().SetTrigger("open");
-        else
-            GetComponent<Animator>().SetTrigger("close");
+        if (canOpen) {
+         
+            doorSoundEmitter.Play();
 
-        opened = !opened;
-        
+            if (!opened)
+                GetComponent<Animator>().SetTrigger("open");
+            else
+                GetComponent<Animator>().SetTrigger("close");
+
+            opened = !opened;
+        }
     }
 }

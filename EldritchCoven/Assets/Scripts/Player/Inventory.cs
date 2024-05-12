@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    private List<GameObject> objetcsInInventory;
+    public List<GameObject> objetctsInInventory;
     [SerializeField]
     private Animator objectInHandAnim;
 
     public void AddItemToInventory(GameObject newObject)
     {
-
+        objetctsInInventory.Add(newObject);
     }
 
     public void RemoveItemFromInventory(GameObject objectToRemove)
