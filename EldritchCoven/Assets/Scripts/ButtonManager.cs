@@ -57,6 +57,7 @@ public class ButtonManager : MonoBehaviour
         {
             for (int i = 0; i < buttons.Count; i++)
             {
+                Debug.Log(buttons[i].gameObject.name + ", " + currentSequence[i].gameObject.name);
                 if (!buttons[i].Equals(currentSequence[i]))
                 {
                     equals = false;
