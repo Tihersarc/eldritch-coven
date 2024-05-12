@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ButtonManager : MonoBehaviour
     private List<Button> currentSequence = new List<Button>();
 
     private static ButtonManager buttonManager;
+
+    public UnityEvent<bool> onCorrectSequence;
 
     public static ButtonManager instance
     {
@@ -53,8 +56,7 @@ public class ButtonManager : MonoBehaviour
             }
             if (equals)
             {
-                Debug.Log("win");
-                onWin.Invoke();
+                onCorrectSequence.Invoke(true);
             }
             else
             {
