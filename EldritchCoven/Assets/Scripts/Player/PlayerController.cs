@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         playerInput.actions.FindActionMap("Pause").Disable();
     }
 
+    [ContextMenu("EnablePlayerActionMap")]
     public void EnablePlayerActionMap()
     {
         playerInput.actions.FindActionMap("Player").Enable();
