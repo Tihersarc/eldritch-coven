@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
     public void Spawn()
     {
         HiddenObjects hiddenScript = spawnedEnemy.GetComponentInChildren<HiddenObjects>();
-        collider.SetActive(true);
+        //collider.SetActive(true);
         hiddenScript.ShowHiddenObject();
         spawnedEnemy.GetComponent<StateController>().enabled = true;
         hiddenScript.enabled = false;

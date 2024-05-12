@@ -47,6 +47,7 @@ public class GlitchEffect : MonoBehaviour
     {
         if (CheckIfMonsterPropInFrustrum())
         {
+            Debug.Log("glitch");
             _material.SetFloat("_Intensity", intensity);
             _material.SetFloat("_ColorIntensity", colorIntensity);
             _material.SetTexture("_DispTex", displacementMap);
