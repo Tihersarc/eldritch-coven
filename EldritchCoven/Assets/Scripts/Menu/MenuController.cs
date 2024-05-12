@@ -22,7 +22,6 @@ public class MenuController : MonoBehaviour
         Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 1);
         while (fadePanel.color.a < 1)
         {
-            Debug.Log(startColor.a);
             fadePanel.color = Color.Lerp(startColor, targetColor, timer / fadeDuration);
             timer += Time.deltaTime;
             yield return null;
@@ -40,7 +39,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenuBeta");
+        SceneManager.LoadScene(0);
     }
 
     public void Quit()
