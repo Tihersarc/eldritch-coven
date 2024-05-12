@@ -39,6 +39,14 @@ public class ButtonManager : MonoBehaviour
         return buttonManager;
     }
 
+    private void Start()
+    {
+        foreach (var button in buttons)
+        {
+            Debug.Log(button.gameObject.name);
+        }
+    }
+
     public static Action onWin;
 
     public void AddButtonToCurrentSequence(Button newButton)
