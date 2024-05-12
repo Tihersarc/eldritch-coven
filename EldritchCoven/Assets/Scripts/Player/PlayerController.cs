@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         stairBehaviour = GetComponent<StairBehaviour>();
         playerInput = GetComponent<PlayerInput>();
 
-        //EnableActionMaps();
+        EnableActionMaps();
 
         //stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }

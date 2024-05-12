@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class TypeWriter : MonoBehaviour
 {
     [SerializeField] float delay = 0.1f;
     string fullText;
     string currentText;
+    public UnityEvent OnEndLetter;
     
     void Start()
     {  
@@ -39,7 +41,8 @@ public class TypeWriter : MonoBehaviour
                 yield return new WaitForSeconds(delay);
             }
         }
-        GameLogic.instance.playerController.EnablePlayerActionMap();
+        //GameLogic.instance.playerController.EnablePlayerActionMap();
+        OnEndLetter.Invoke();
     }
 
 }
