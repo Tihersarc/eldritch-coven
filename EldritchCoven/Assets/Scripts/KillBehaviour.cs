@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine.Events;
 
 public class KillBehaviour : MonoBehaviour
 {
-    public static Action onKill;
+    public static Action onKill; 
 
     private void OnTriggerEnter(Collider other)
     {

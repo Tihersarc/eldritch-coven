@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
     GameObject collider;
     GameObject spawnedEnemy;
     [HideInInspector] public GameObject instantiatedProp;
+    [SerializeField] GameObject destroyParticles;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
-        collider = enemy.GetComponentInChildren<Collider>().gameObject;
+        collider = enemy.GetComponent<Enemy>().enemyCollider;
         collider.SetActive(false);
         enemy.transform.position = spawnPoint.position;
         enemy.transform.rotation = enemyRotation;
@@ -42,10 +43,18 @@ public class EnemySpawner : MonoBehaviour
     public void Spawn()
     {
         HiddenObjects hiddenScript = spawnedEnemy.GetComponentInChildren<HiddenObjects>();
-        collider.SetActive(true);
+        //collider.SetActive(true);
         hiddenScript.ShowHiddenObject();
-        spawnedEnemy.GetComponent<StateController>().enabled = true;
+        spawnedEnemy.GetComponent<StateController>().currentState.isDone = true;
         hiddenScript.enabled = false;
+    }
+
+    public void DestroySpawner()
+    {
+        Instantiate(destroyParticles, this.gameObject.transform.position, Quaternion.identity);
+        //spawnManager.spawners.Remove(this);
+        //Destroy(this.transform.parent.gameObject);
+        Debug.Log("hola");
     }
 
     public void RemoveSpawner()

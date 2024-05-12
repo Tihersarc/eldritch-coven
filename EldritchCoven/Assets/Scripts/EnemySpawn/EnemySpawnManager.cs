@@ -34,9 +34,13 @@ public class EnemySpawnManager : MonoBehaviour
     }
 
     public List<EnemySpawner> spawners = new List<EnemySpawner>();
-    [SerializeField] int spawnTime;
+    [SerializeField] int spawnTime = 300;
+    [SerializeField] int[] spawnDelayRange = new int[2] {120, 300};
+    int spawnDelay;
     float currentTimeToSpawn;
+    float currentTimeToSpawnDelay;
     bool canSpawn = false;
+    bool beginToSpawn = false;
 
     private void Awake()
     {
@@ -47,21 +51,44 @@ public class EnemySpawnManager : MonoBehaviour
     void Start()
     {
         currentTimeToSpawn = 0f;
+        currentTimeToSpawnDelay = 0f;
+        spawnDelay = Random.Range(spawnDelayRange[0], spawnDelayRange[1]);
     }
 
     void Update()
     {
-        if (canSpawn)
+        if (canSpawn && spawners.Count > 0)
         {
-            if (currentTimeToSpawn > spawnTime)
+            if (!beginToSpawn)
             {
-                EnemySpawner enemy = spawners[Random.Range(0, spawners.Count)];
-                enemy.Spawn();
-                currentTimeToSpawn = 0f;
+                if (currentTimeToSpawn > spawnTime)
+                {
+                    int randomIndex = Random.Range(0, spawners.Count);
+                    EnemySpawner enemy = spawners[randomIndex];
+                    enemy.Spawn();
+                    spawners.RemoveAt(randomIndex);
+                    beginToSpawn = true;
+                }
+                else
+                {
+                    currentTimeToSpawn += Time.deltaTime;
+                }
             }
             else
             {
-                currentTimeToSpawn += Time.deltaTime;
+                if (currentTimeToSpawnDelay > spawnDelay)
+                {
+                    int randomIndex = Random.Range(0, spawners.Count);
+                    EnemySpawner enemy = spawners[randomIndex];
+                    enemy.Spawn();
+                    spawners.RemoveAt(randomIndex);
+                    spawnDelay = Random.Range(spawnDelayRange[0], spawnDelayRange[1]);
+                    currentTimeToSpawnDelay = 0f;
+                }
+                else
+                {
+                    currentTimeToSpawnDelay += Time.deltaTime;
+                }
             }
         }
     }

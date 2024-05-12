@@ -36,6 +36,8 @@ public class GlitchEffect : MonoBehaviour
 
     [SerializeField] float raycastDistance = 4.0f;
 
+    [HideInInspector] public bool glitching = false;
+    [HideInInspector] public GameObject propInCam; 
 
     void Start()
     {
@@ -47,6 +49,7 @@ public class GlitchEffect : MonoBehaviour
     {
         if (CheckIfMonsterPropInFrustrum())
         {
+            glitching = true;
             _material.SetFloat("_Intensity", intensity);
             _material.SetFloat("_ColorIntensity", colorIntensity);
             _material.SetTexture("_DispTex", displacementMap);
@@ -106,66 +109,10 @@ public class GlitchEffect : MonoBehaviour
         }
         else
         {
-            //HandleMaterialValuesDecrease();
+            glitching = false;
             Graphics.Blit(source, destination);
         }
     }
-
-    //private void HandleMaterialValuesIncrease()
-    //{
-    //    colorIntensityCurveTimer = Mathf.Clamp(colorIntensityCurveTimer + Time.deltaTime, 0, colorIntensityCurveDuration);
-
-    //    colorIntensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration);
-    //    intensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration) * maxIntensity;
-    //    if (colorIntensity >= 1.0f)
-    //    {
-    //        colorIntensity = 1.0f;
-    //    }
-    //    _material.SetFloat("_Intensity", intensity);
-    //    _material.SetFloat("_ColorIntensity", colorIntensity);
-    //}
-
-    //private void HandleMaterialValuesDecrease()
-    //{
-    //    colorIntensityCurveTimer = Mathf.Clamp(colorIntensityCurveTimer - Time.deltaTime, 0, colorIntensityCurveDuration);
-
-    //    colorIntensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration);
-    //    intensity = colorIntensityCurve.Evaluate(colorIntensityCurveTimer / colorIntensityCurveDuration) * maxIntensity;
-
-    //    if (colorIntensity <= 0)
-    //    {
-    //        colorIntensity = 0;
-    //    }
-
-    //    _material.SetFloat("_Intensity", intensity);
-    //    _material.SetFloat("_ColorIntensity", colorIntensity);
-    //}
-
-    //IEnumerator ColorIntensityChange()
-    //{
-    //    if (increasingColorIntensity)
-    //    {
-    //        colorIntensity += Time.deltaTime * 0.1f; 
-    //        if (colorIntensity >= 1.0f)
-    //        {
-    //            colorIntensity = 1.0f;
-    //            increasingColorIntensity = false; 
-    //        }
-    //    }
-    //    else
-    //    {
-    //        colorIntensity -= Time.deltaTime * 0.1f; 
-    //        if (colorIntensity <= 0)
-    //        {
-    //            colorIntensity = 0;
-    //            increasingColorIntensity = true; 
-    //        }
-    //    }
-
-    //    _material.SetFloat("_ColorIntensity", colorIntensity);
-    //    yield return null;
-
-    //}
 
     Vector3 pos = Vector3.zero;
 
@@ -173,31 +120,7 @@ public class GlitchEffect : MonoBehaviour
     {
         bool enemyPropInCam = false;
 
-        //Camera cam = this.GetComponent<Camera>();
-        //Plane[] cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
-
-        //List<EnemySpawner> spawners = EnemySpawnManager.instance.spawners;
-
-        //foreach (EnemySpawner spawner in spawners)
-        //{
-        //    Bounds propBounds = spawner.instantiatedProp.GetComponentInChildren<MeshRenderer>().bounds;
-        //    propBounds.size *= 0.5f;
-
-        //    if (GeometryUtility.TestPlanesAABB(cameraFrustum, propBounds))
-        //    {
-        //        RaycastHit hit;
-        //        if(Physics.Raycast(transform.position, spawner.instantiatedProp.transform.position - transform.position, out hit, raycastDistance))
-        //        {
-        //            if(hit.transform.gameObject.tag == "GlitchedProp")
-        //            {
-        //                enemyPropInCam = true;
-        //                break;
-        //            }
-        //        }
-        //    }
-        //}
-
-        RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(.1f, .1f, 1f), this.transform.forward, Quaternion.identity, raycastDistance);
+        RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(.5f, .5f, .5f), this.transform.forward, Quaternion.identity, raycastDistance);
 
         foreach (RaycastHit hit in hits)
         {
@@ -205,10 +128,22 @@ public class GlitchEffect : MonoBehaviour
             {
                 pos = hit.transform.position;
                 RaycastHit checkHit;
-                Physics.Raycast(hit.transform.position, this.transform.position - hit.transform.position, out checkHit, Mathf.Infinity);
-                enemyPropInCam = checkHit.transform.name == "Player";
-                break;
-            }  
+                if(Physics.Raycast(hit.transform.position, this.transform.position - hit.transform.position, out checkHit, Mathf.Infinity))
+                {
+                    enemyPropInCam = checkHit.transform.name == "Player";
+                    propInCam = hit.transform.gameObject;
+                    break;
+                }
+                else
+                {
+                    propInCam = null;
+                }
+
+            }
+            else
+            {
+                propInCam = null;
+            }
         }
 
         return enemyPropInCam;

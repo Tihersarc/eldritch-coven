@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.Windows;
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
     private GameObject detectedInteractableObject = null;
 
     private PlayerInput playerInput;
+
+    [SerializeField] GameObject glitchedCamera;
 
     private void Start()
     {
@@ -142,7 +145,19 @@ public class PlayerController : MonoBehaviour
             {
                 photo.TakePhoto();
                 Image.TakePhoto();
+
+                Invoke("DestroyProp", 0.3f);
             }
+        }
+    }
+
+    void DestroyProp()
+    {
+        GlitchEffect glitchEffect = glitchedCamera.GetComponent<GlitchEffect>() as GlitchEffect;
+        if (glitchEffect.glitching)
+        {
+            glitchEffect.propInCam.transform.parent.gameObject.SetActive(false);
+            glitchEffect.propInCam.transform.parent.GetComponent<EnemySpawner>().DestroySpawner();
         }
     }
 
