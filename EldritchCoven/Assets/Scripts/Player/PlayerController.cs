@@ -5,6 +5,7 @@ using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.Windows;
 using static UnityEngine.InputSystem.DefaultInputActions;
 
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float interactableDistance;
 
-    private Vector2 moveInput;
+    private Vector2 moveInput = Vector2.zero;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
     [SerializeField] private StudioEventEmitter cameraSoundEmitter;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Polaroid polaroid;
     [SerializeField] private RevealImage Image;
 
+    private GameObject detectedInteractableObject = null;
 
     private PlayerInput playerInput;
 
@@ -41,8 +43,8 @@ public class PlayerController : MonoBehaviour
         mvb = GetComponent<MovementBehaviour>();
         stairBehaviour = GetComponent<StairBehaviour>();
         playerInput = GetComponent<PlayerInput>();
-
-        EnableActionMaps();
+        DisablePlayerActionMap();
+        //EnableActionMaps();
 
         //stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
@@ -56,7 +58,32 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
         {
             Outline outline = hit.transform.gameObject.GetComponent<Outline>();
+
+            if (detectedInteractableObject != hit.transform.gameObject)
+            {
+                detectedInteractableObject = hit.transform.gameObject;
+                outline.OutlineWidth = 10;
+                StartCoroutine(_CheckInteractableOutOfDistance(detectedInteractableObject));
+            }
         }
+        else
+        {
+            detectedInteractableObject = null;
+        }
+    }
+
+    IEnumerator _CheckInteractableOutOfDistance(GameObject interactableObject)
+    {
+        RaycastHit hit;
+        while (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
+        {
+            if (hit.transform.gameObject != interactableObject)
+                break;
+            yield return null;
+        }
+        
+        interactableObject.GetComponent<Outline>().OutlineWidth = 0;
+        detectedInteractableObject = null;
     }
 
     private void FixedUpdate()
@@ -70,6 +97,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             mvb.StopRB();
+            //transform.position = transform.position;
         }
     }
 
@@ -82,7 +110,7 @@ public class PlayerController : MonoBehaviour
     public void DisablePlayerActionMap()
     {
         playerInput.actions.FindActionMap("Player").Disable();
-        playerInput.actions.FindActionMap("Player").Disable();
+        playerInput.actions.FindActionMap("Pause").Disable();
     }
 
     public void EnablePlayerActionMap()
