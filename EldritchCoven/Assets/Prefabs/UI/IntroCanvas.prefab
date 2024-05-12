@@ -337,4 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5da477a1784a0438b197a07d67ff24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.03
+  delay: 0.02
+  OnEndLetter:
+    m_PersistentCalls:
+      m_Calls: []

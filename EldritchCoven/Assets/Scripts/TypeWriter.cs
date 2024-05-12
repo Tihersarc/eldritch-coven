@@ -22,7 +22,7 @@ public class TypeWriter : MonoBehaviour
     [ContextMenu("StartTypeWriteing")]
     public void StartTypeWriteing()
     {
-        GameLogic.instance.playerController.DisablePlayerActionMap();
+        
         StartCoroutine(ShowText());
     }
     

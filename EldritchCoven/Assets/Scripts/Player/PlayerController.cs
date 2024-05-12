@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float interactableDistance;
 
-    private Vector2 moveInput;
+    private Vector2 moveInput = Vector2.zero;
     [SerializeField] private GameObject plane;
     [SerializeField] private Camera cameraPhotos;
     [SerializeField] private StudioEventEmitter cameraSoundEmitter;
@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
         mvb = GetComponent<MovementBehaviour>();
         stairBehaviour = GetComponent<StairBehaviour>();
         playerInput = GetComponent<PlayerInput>();
-
-        EnableActionMaps();
+        DisablePlayerActionMap();
+        //EnableActionMaps();
 
         //stepsPlayer = GetComponentInChildren<StepsPlayer>();
     }
@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             mvb.StopRB();
+            //transform.position = transform.position;
         }
     }
 
