@@ -146,15 +146,18 @@ public class PlayerController : MonoBehaviour
                 photo.TakePhoto();
                 Image.TakePhoto();
 
-                GlitchEffect glitchEffect = glitchedCamera.GetComponent<GlitchEffect>() as GlitchEffect;
-                if (glitchEffect.glitching)
-                {
-                    glitchEffect.propInCam.transform.parent.gameObject.SetActive(false);
-                    //Destroy(glitchEffect.propInCam.transform.parent.gameObject);
-                    //Debug.Log(glitchEffect.propInCam.transform.parent.gameObject.name);
-                    glitchEffect.propInCam.transform.parent.GetComponent<EnemySpawner>().DestroySpawner();
-                }
+                Invoke("DestroyProp", 0.3f);
             }
+        }
+    }
+
+    void DestroyProp()
+    {
+        GlitchEffect glitchEffect = glitchedCamera.GetComponent<GlitchEffect>() as GlitchEffect;
+        if (glitchEffect.glitching)
+        {
+            glitchEffect.propInCam.transform.parent.gameObject.SetActive(false);
+            glitchEffect.propInCam.transform.parent.GetComponent<EnemySpawner>().DestroySpawner();
         }
     }
 

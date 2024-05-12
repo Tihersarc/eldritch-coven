@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
         GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
-        collider = enemy.GetComponentInChildren<Collider>().gameObject;
+        collider = enemy.GetComponent<Enemy>().enemyCollider;
         collider.SetActive(false);
         enemy.transform.position = spawnPoint.position;
         enemy.transform.rotation = enemyRotation;

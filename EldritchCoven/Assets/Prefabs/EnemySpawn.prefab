@@ -102,6 +102,7 @@ MonoBehaviour:
   - {fileID: 6498487341456612816, guid: 552db93cbbfdb3f4d93f8a7963fc7bf6, type: 3}
   enemies:
   - {fileID: 2040604319182501948, guid: e0a0da91a9f6f08468cba99dc37bf087, type: 3}
+  - {fileID: 8394788350350239416, guid: 5e534e443a378a24ca7739c95007c381, type: 3}
   spawnPoint: {fileID: 1242487353688918511}
   instantiatedProp: {fileID: 0}
   destroyParticles: {fileID: 6187129940125120159, guid: cabb065f3c0f1a44d9ec10b198c044dc, type: 3}

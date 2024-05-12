@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30daa4dc4e2352f448c7031d07606ef9, type: 3}
-  m_Name: ChaseState
+  m_Script: {fileID: 11500000, guid: c48970dfc8add754b8d915561cea1ffe, type: 3}
+  m_Name: AttackState
   m_EditorClassIdentifier: 
   isDone: 0
   possibleTransitions:
   - decisionToBeMade: {fileID: 11400000, guid: 799ea911cd23eae42a7b5b8fbfb73151, type: 2}
-    onDecisionTrueExitState: {fileID: 11400000, guid: 6f7dbf6ed164d134eab70ea6400eabc3, type: 2}
-    onDecisionFalseExitState: {fileID: 0}
+    onDecisionTrueExitState: {fileID: 0}
+    onDecisionFalseExitState: {fileID: 11400000, guid: 91b23e479eaf0de488ddbb68175505bc, type: 2}
