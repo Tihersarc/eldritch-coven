@@ -1,10 +1,4 @@
-﻿//
-//  Outline.cs
-//  QuickOutline
-//
-//  Created by Chris Nolet on 3/30/18.
-//  Copyright © 2018 Chris Nolet. All rights reserved.
-//
+﻿
 
 using System;
 using System.Collections.Generic;
@@ -100,16 +94,16 @@ public class Outline : MonoBehaviour {
   }
 
   void OnEnable() {
-    foreach (var renderer in renderers) {
+      foreach (var renderer in renderers) {
 
-      // Append outline shaders
-      var materials = renderer.sharedMaterials.ToList();
+          // Append outline shaders
+          var materials = renderer.sharedMaterials.ToList();
 
-      materials.Add(outlineMaskMaterial);
-      materials.Add(outlineFillMaterial);
+          materials.Add(outlineMaskMaterial);
+          materials.Add(outlineFillMaterial);
 
-      renderer.materials = materials.ToArray();
-    }
+          renderer.materials = materials.ToArray();
+      }
   }
 
   void OnValidate() {
