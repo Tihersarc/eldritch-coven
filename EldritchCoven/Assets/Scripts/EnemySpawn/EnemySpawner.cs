@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
     GameObject collider;
     GameObject spawnedEnemy;
     [HideInInspector] public GameObject instantiatedProp;
+    [SerializeField] GameObject destroyParticles;
 
     private void Start()
     {
@@ -46,6 +47,14 @@ public class EnemySpawner : MonoBehaviour
         hiddenScript.ShowHiddenObject();
         spawnedEnemy.GetComponent<StateController>().currentState.isDone = true;
         hiddenScript.enabled = false;
+    }
+
+    public void DestroySpawner()
+    {
+        Instantiate(destroyParticles, this.gameObject.transform.position, Quaternion.identity);
+        //spawnManager.spawners.Remove(this);
+        //Destroy(this.transform.parent.gameObject);
+        Debug.Log("hola");
     }
 
     public void RemoveSpawner()

@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,8 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
     [SerializeField] State firstState;
-    [SerializeField] public State currentState;
+    public State currentState;
+    public StudioEventEmitter enemySoundEmitter;
     public Enemy enemy;// { get; private set; }
 
     void Start() {

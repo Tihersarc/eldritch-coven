@@ -4816,10 +4816,10 @@ GameObject:
   - component: {fileID: 1335411194953536361}
   - component: {fileID: 1455951658205056464}
   - component: {fileID: 391844718851537316}
+  - component: {fileID: 3458464929939674132}
   - component: {fileID: 7560573767942068480}
   - component: {fileID: 6603143137147974636}
   - component: {fileID: 1805455517302566553}
-  - component: {fileID: 3458464929939674132}
   - component: {fileID: 4064048661209462116}
   - component: {fileID: 3376226939357797352}
   - component: {fileID: 365116304678395862}
@@ -5077,6 +5077,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3458464929939674132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219246608532508875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd210c2e713b8649a21a55e6f465718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  interactableDistance: 4
+  plane: {fileID: 7206085399224096012}
+  cameraPhotos: {fileID: 1658762737371806898}
+  cameraSoundEmitter: {fileID: 6836771862016992409}
+  photo: {fileID: 7316967779210334251}
+  polaroid: {fileID: 565844183748590314}
+  Image: {fileID: 8703362705056209485}
 --- !u!114 &7560573767942068480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5127,28 +5149,6 @@ MonoBehaviour:
   rotLimit: 80
   playerControls: {fileID: -944628639613478452, guid: 28b5a211b89c91c40b03127030c1ee7c, type: 3}
   playerInput: {fileID: 391844718851537316}
---- !u!114 &3458464929939674132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9219246608532508875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd210c2e713b8649a21a55e6f465718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  interactableDistance: 4
-  plane: {fileID: 7206085399224096012}
-  cameraPhotos: {fileID: 1658762737371806898}
-  cameraSoundEmitter: {fileID: 6836771862016992409}
-  photo: {fileID: 7316967779210334251}
-  polaroid: {fileID: 565844183748590314}
-  Image: {fileID: 8703362705056209485}
 --- !u!114 &4064048661209462116
 MonoBehaviour:
   m_ObjectHideFlags: 0

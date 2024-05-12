@@ -104,6 +104,7 @@ MonoBehaviour:
   - {fileID: 2040604319182501948, guid: e0a0da91a9f6f08468cba99dc37bf087, type: 3}
   spawnPoint: {fileID: 1242487353688918511}
   instantiatedProp: {fileID: 0}
+  destroyParticles: {fileID: 6187129940125120159, guid: cabb065f3c0f1a44d9ec10b198c044dc, type: 3}
 --- !u!1 &3753814807115969912
 GameObject:
   m_ObjectHideFlags: 0
