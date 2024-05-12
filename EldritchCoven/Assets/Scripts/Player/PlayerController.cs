@@ -57,9 +57,9 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
         {
-            Outline outline = hit.transform.gameObject.GetComponent<Outline>();
+            Outline outline; hit.transform.gameObject.TryGetComponent<Outline>(out outline);
 
-            if (detectedInteractableObject != hit.transform.gameObject)
+            if ((detectedInteractableObject != hit.transform.gameObject) && outline != null)
             {
                 detectedInteractableObject = hit.transform.gameObject;
                 outline.OutlineWidth = 10;
@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour
             Button button;
             Door door;
             Page page;
+            Key key;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactableDistance, interactableLayers))
             {
                 if (hit.transform.TryGetComponent<Button>(out button))
@@ -172,6 +173,10 @@ public class PlayerController : MonoBehaviour
                 if (hit.transform.TryGetComponent<Page>(out page))
                 {
                     page.Interact();
+                }
+                if (hit.transform.TryGetComponent<Key>(out key))
+                {
+                    key.Interact();
                 }
             }
 
