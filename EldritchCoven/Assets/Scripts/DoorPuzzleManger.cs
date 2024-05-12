@@ -7,7 +7,7 @@ public class DoorPuzzleManger : MonoBehaviour
 {
     [SerializeField] List<int> order;
 
-    private List<int> currentOrder;
+    private List<int> currentOrder = new List<int>();
 
     private bool canInputNewNumber;
     public UnityEvent onCorrectSequence;
