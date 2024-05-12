@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b637eea9109aa4298f2b6e9551817b, type: 3}
   m_Name: IdleState
   m_EditorClassIdentifier: 
+  isDone: 0
   possibleTransitions:
-  - decisionToBeMade: {fileID: 11400000, guid: a976c3edc034b614cbf5ae19187f2291, type: 2}
-    onDecisionTrueExitState: {fileID: 11400000, guid: 33a4b45918943a7459de71c2ebb620f7, type: 2}
+  - decisionToBeMade: {fileID: 11400000, guid: 85dc89d8da2ac1f458df8d1844553ae9, type: 2}
+    onDecisionTrueExitState: {fileID: 11400000, guid: 91b23e479eaf0de488ddbb68175505bc, type: 2}
     onDecisionFalseExitState: {fileID: 0}

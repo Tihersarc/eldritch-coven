@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
     [SerializeField] State firstState;
-    [SerializeField] State currentState;
+    [SerializeField] public State currentState;
     public Enemy enemy;// { get; private set; }
 
     void Start() {

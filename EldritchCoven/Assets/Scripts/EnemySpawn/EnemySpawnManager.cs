@@ -57,7 +57,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Update()
     {
-        if (canSpawn)
+        if (canSpawn && spawners.Count > 0)
         {
             if (!beginToSpawn)
             {
