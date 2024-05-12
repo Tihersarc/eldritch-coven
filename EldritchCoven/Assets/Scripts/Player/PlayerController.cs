@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!PauseBehaviour.Instance.IsPaused)
+        if (!PauseBehaviour.Instance.IsPaused && ctx.performed)
         {
             RaycastHit hit;
             Button button;
