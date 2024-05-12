@@ -5099,6 +5099,7 @@ MonoBehaviour:
   photo: {fileID: 7316967779210334251}
   polaroid: {fileID: 565844183748590314}
   Image: {fileID: 8703362705056209485}
+  glitchedCamera: {fileID: 2989454696190885408}
 --- !u!114 &7560573767942068480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,13 +6197,13 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 95.91
       objectReference: {fileID: 0}
-    - target: {fileID: 8259073245272434783, guid: d97fc982225e6554c92fd41201d709f4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7389491261618976913, guid: d97fc982225e6554c92fd41201d709f4, type: 3}
       propertyPath: m_text
       value: '[ESC] '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259073245272434783, guid: d97fc982225e6554c92fd41201d709f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8290404311720169088, guid: d97fc982225e6554c92fd41201d709f4, type: 3}
       propertyPath: clickSound
@@ -6681,7 +6682,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2989454696190885408}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9da9ffafd2817824f8bc1bcde6146a75, type: 3}
   m_Name: 
@@ -6717,6 +6718,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   colorIntensityCurveDuration: 2
   raycastDistance: 4
+  glitching: 0
+  propInCam: {fileID: 0}
 --- !u!114 &6027690262990153074
 MonoBehaviour:
   m_ObjectHideFlags: 0

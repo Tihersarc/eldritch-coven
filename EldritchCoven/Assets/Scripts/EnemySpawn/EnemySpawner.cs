@@ -31,7 +31,8 @@ public class EnemySpawner : MonoBehaviour
     public void InstantiateHiddenEnemy()
     {
         Quaternion enemyRotation = Quaternion.LookRotation(GameLogic.instance.playerController.transform.position - this.transform.position);
-        GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, this.gameObject.transform);
+        GameObject enemy = Instantiate(enemies[(int)Random.Range(0, enemies.Length)].gameObject, spawnPoint.position, Quaternion.identity);
+        enemy.transform.parent = this.transform;
         collider = enemy.GetComponent<Enemy>().enemyCollider;
         collider.SetActive(false);
         enemy.transform.position = spawnPoint.position;
