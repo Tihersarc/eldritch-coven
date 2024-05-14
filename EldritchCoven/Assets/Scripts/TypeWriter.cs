@@ -11,6 +11,7 @@ public class TypeWriter : MonoBehaviour
     string fullText;
     string currentText;
     public UnityEvent OnEndLetter;
+    bool skip = false;
     
     void Start()
     {  
@@ -30,6 +31,11 @@ public class TypeWriter : MonoBehaviour
     {
         for(int i = 0; i < fullText.Length; i++) 
         {
+            if (skip)
+            {
+                i = fullText.Length - 1;
+            }
+
             currentText = fullText.Substring(0, i);
             this.GetComponent<TextMeshProUGUI>().text = currentText;
             if (fullText[i] == '\n' || fullText[i] == '.')
@@ -39,10 +45,15 @@ public class TypeWriter : MonoBehaviour
             else
             {
                 yield return new WaitForSeconds(delay);
-            }
+            }        
         }
-        //GameLogic.instance.playerController.EnablePlayerActionMap();
+
         OnEndLetter.Invoke();
     }
 
+    [ContextMenu("Skip")]
+    void Skip()
+    {
+        skip = true;
+    }
 }

@@ -8,6 +8,7 @@ public class SequentialLights : MonoBehaviour
     [SerializeField] float delay;
     int index = 0;
 
+    [ContextMenu("StartLights")]
     public void StartLights()
     {
         InvokeRepeating("ActivateChandelier", delay, delay);
@@ -23,6 +24,7 @@ public class SequentialLights : MonoBehaviour
         }
         else
         {
+            index = 0;
             CancelInvoke();
         }
     }

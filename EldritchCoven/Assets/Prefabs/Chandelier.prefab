@@ -38,7 +38,6 @@ Transform:
   - {fileID: 6566086040531106555}
   - {fileID: 6741811609788965661}
   - {fileID: 1760667170286749727}
-  - {fileID: 5784759277705384893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1448053291570527712
@@ -140,10 +139,6 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
@@ -232,10 +227,6 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -327,10 +318,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (6)
@@ -393,92 +380,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159216888601052643, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
   m_PrefabInstance: {fileID: 3221451934392936190}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3594168560112384360
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2684702754019379301}
-    m_Modifications:
-    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 4.591775e-39
-      objectReference: {fileID: 0}
-    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 1.02e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 4.67e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3815296678534553760, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 3.1367e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405746995456850904, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_Name
-      value: 'Point Light '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405746995456850904, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708404805233635648, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: maxOffset
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5700073
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
---- !u!4 &5784759277705384893 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7036481519571331797, guid: bbf2369f6f19b8045884c62f20a9c6df, type: 3}
-  m_PrefabInstance: {fileID: 3594168560112384360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4708932291215511830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,9 +392,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
+    - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
@@ -569,10 +470,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4228155733085740458, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Name
       value: CandleFlame (2)
@@ -646,10 +543,6 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -742,10 +635,6 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
@@ -834,10 +723,6 @@ PrefabInstance:
     - target: {fileID: 2242564642128765387, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_Layer
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2878744145373993102, guid: e3820ffff657bdc4a8a0989cd6851f44, type: 3}
       propertyPath: m_BoundingSphereOverride.w

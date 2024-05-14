@@ -30,7 +30,7 @@ public class CandleLight : MonoBehaviour
     void FlameMovement()
     {
         transform.localPosition = new Vector3(Random.Range(-maxOffset, maxOffset), Random.Range(-maxOffset, maxOffset), Random.Range(-maxOffset, maxOffset));
-        light.intensity += Random.Range(-0.02f, 0.02f);
+        light.intensity += Random.Range(-0.05f, 0.05f);
         Mathf.Clamp(light.intensity, light.intensity - 0.05f, light.intensity + 0.05f);
     }
 }

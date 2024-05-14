@@ -85,10 +85,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle Point Light
       objectReference: {fileID: 0}
-    - target: {fileID: 5363401111388714890, guid: 86ed438b046663c439f210aef3ec88af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
