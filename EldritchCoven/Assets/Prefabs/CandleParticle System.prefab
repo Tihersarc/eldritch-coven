@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8647651818998126953}
   - component: {fileID: 2000559875932328339}
   - component: {fileID: 8771662091874391549}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: CandleParticle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
