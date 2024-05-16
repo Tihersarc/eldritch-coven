@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour
     public static event HideObjects hideObjects;
 
     private MovementBehaviour mvb;
-    private StairBehaviour stairBehaviour;
-    //private StepsPlayer stepsPlayer;
 
     [SerializeField]
     private LayerMask interactableLayers;
@@ -44,7 +42,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         mvb = GetComponent<MovementBehaviour>();
-        stairBehaviour = GetComponent<StairBehaviour>();
         playerInput = GetComponent<PlayerInput>();
         DisablePlayerActionMap();
         //EnableActionMaps();
@@ -94,7 +91,7 @@ public class PlayerController : MonoBehaviour
         if (moveInput != Vector2.zero)
         {
             mvb.MoveRB(moveInput);
-            stairBehaviour.StepClimb();
+            //stairBehaviour.StepClimb();
             //stepsPlayer.MaterialCheck(); // TODO Check why sound breaks
         }
         else
